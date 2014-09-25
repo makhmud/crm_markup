@@ -1,0 +1,259 @@
+html, body{
+	height: 100%;
+}
+
+body{
+	font-family: 'Tahoma';
+	font-size: 10px;
+	margin: 0;
+	width: 100%;
+}
+
+a, a:visited{
+	color: #6a8dc0;
+}
+.inline-block{
+	display: inline-block;
+}
+.vat{
+	vertical-align: top;
+}
+.fr{
+	float: right;
+}
+.fl{
+	float: left;
+}
+
+ul.inline-menu{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul.inline-menu li{
+	display: inline-block;
+	vertical-align: top;
+}
+
+span.type-22{
+	display: inline-block;
+	width: 22px;
+	height: 22px;	
+	-webkit-background-size: 22px 22p;
+	background-size: 22px 44px;
+	background-position: 0 0;
+	border-radius: 11px;
+	cursor: pointer;
+	position: relative;
+}
+span.type-22.active{
+	background-position: 0 -22px;
+}
+span.type-22:hover{
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.31);
+}
+span.type-22:active{
+	top: 1px;
+	box-shadow: 0 -1px 1px 0 rgba(0,0,0,.31);
+}
+
+span.vip{
+	background-image: url(../img/vip.png);
+}
+span.important{
+	background-image: url(../img/important.png);
+}
+span.filter{
+	background-image: url(../img/filter.png);
+}
+span.add{
+	background-image: url(../img/add.png);
+}
+
+#page{
+	width: 100%;
+	height: 100%;
+	min-width: 1024px;
+	font-size: 1.2em;
+}
+header{
+	width: 100%;
+	height: 38px;
+	background: #5c5c5c;
+}
+#main-menu-button{
+	width: 76px;
+	height: 38px;
+	background: url(../img/top-menu.png) center center no-repeat;
+	-webkit-background-size: 20px 12px;
+	background-size: 20px 12px;
+	opacity: .2;
+	
+}
+#main-content{
+	max-width: 1280px;
+	min-width: 1024px;
+	height: 100%;
+}
+#top-menu li a, #profile-menu a{
+	height: 38px;
+	line-height: 38px;
+	display: inline-block;
+}
+#top-menu li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 0 12px;
+}
+#top-menu li:first-child a{
+	padding-left: 0;
+}
+#top-menu li:last-child a{
+	padding-right: 0;
+}
+#top-menu li a:hover{
+	color: #7d7d7d;
+}
+
+#profile-menu a{
+	padding: 5px 15px 0;
+}
+#profile-menu a>span{
+	background-image: url(../img/profile-menu-icons.png);
+	-webkit-background-size: 60px 40px;
+	background-size: 60px 40px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	position: relative;
+}
+.icon-settings{
+	background-position: -20px 0;
+}
+.icon-user{
+	background-position: -40px 0;
+}
+span.count{
+	position: absolute;
+	border: 3px solid  #5c5c5c;
+	color: #fff;
+	line-height: 1;
+	background: #ea6c6c;
+	font-size: 8px;
+	padding: 1px 5px; 
+	border-radius: 10px;
+	top: -5px;
+	right: -20px;
+}
+
+#main-content > *{
+	display: inline-block;
+	vertical-align: top;
+}
+
+#left-sidebar{
+	width: 76px;
+	background: #f2f2f2;
+	height: 100%;
+}
+
+#left-menu li{
+	width: 76px;
+	text-align: center;
+	border-bottom: 1px solid #f9f9f9;
+}
+#left-menu span[class^="icon-"]{
+	width: 26px;
+	height: 26px;
+	background-image: url(../img/left-menu.png);
+	-webkit-background-size: 104px 78px;
+	background-size: 104px 78px;
+	display: inline-block;
+}
+
+#left-menu a:hover span.icon-order{
+	background-position: 0 0;
+}
+#left-menu span.icon-clients{
+	background-position: -26px 0 ;
+}
+#left-menu span.icon-pack{
+	background-position: -52px 0;
+}
+#left-menu span.icon-delivery{
+	background-position: -78px 0;
+}
+
+#left-menu a:not(.active):hover span.icon-order{
+	background-position: 0 -52px;
+}
+#left-menu a:not(.active):hover span.icon-clients{
+	background-position: -26px -52px;
+}
+#left-menu a:not(.active):hover span.icon-pack{
+	background-position: -52px -52px;
+}
+#left-menu a:not(.active):hover span.icon-delivery{
+	background-position: -78px -52px;
+}
+
+#left-menu a{
+	text-decoration: none;
+	color: #333;
+	display: inline-block;	
+	padding: 20px 0;
+	border-bottom: 1px solid #e8e8e8;
+	width: 76px;
+}
+#left-menu a.active>*{
+	opacity: .2;
+}
+
+#main{
+	height: 100%;
+	box-shadow: -3px 0 3px #e6e6e6;
+	max-width: 1204px;
+	min-width: 948px;
+}
+
+#top-panel{
+	height: 50px;
+	line-height: 50px;
+	background: #f2f2f2;
+}
+
+#order-list-wrapper{
+	width: 240px;
+}
+
+#order-list{
+	height: 540px;
+	width: 240px;
+}
+#order-list li{
+	border-bottom: 1px solid #f2f2f2;
+	display: block;
+}
+#order-list li a{
+	display: block;
+	border-left: 7px solid #00ba55;
+	padding: 20px 10px;
+	color: #333;
+}
+#order-list li a:hover{
+	background-color: #f2f2f2;
+}
+#order-list li a time{
+	font-size: 10px;
+	color: #c2c2c2;
+}
+#order-list li a.red{
+	border-left-color: #ea6c6c;
+}
+#order-list li a.blue{
+	border-left-color: #6a8dc0;
+}
+.jspVerticalBar{
+	width: 5px;
+	background-color: #f2f2f2;
+}
