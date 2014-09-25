@@ -1,0 +1,134 @@
+
+a, a:visited{
+	color: #6a8dc0;
+}
+.inline-block{
+	display: inline-block;
+}
+.vat{
+	vertical-align: top;
+}
+.fr{
+	float: right;
+}
+.fl{
+	float: left;
+}
+
+ul.inline-menu{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul.inline-menu li{
+	display: inline-block;
+	vertical-align: top;
+}
+
+span.type-22{
+	display: inline-block;
+	width: 22px;
+	height: 22px;	
+	-webkit-background-size: 22px 22p;
+	background-size: 22px 44px;
+	background-position: 0 0;
+	border-radius: 11px;
+	cursor: pointer;
+	position: relative;
+}
+span.type-22.active{
+	background-position: 0 -22px;
+}
+span.type-22:hover{
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.31);
+}
+span.type-22:active{
+	top: 1px;
+	box-shadow: 0 -1px 1px 0 rgba(0,0,0,.31);
+}
+
+span.vip{
+	background-image: url(../img/vip.png);
+}
+span.important{
+	background-image: url(../img/important.png);
+}
+span.filter{
+	background-image: url(../img/filter.png);
+}
+span.add{
+	background-image: url(../img/add.png);
+}
+
+.repeat-button{
+	width: 20px;
+	height: 25px;
+	display: inline-block;
+	background-image: url(../img/repeat.png);
+	-webkit-background-size: 20px 25px;
+	background-size: 20px 25px;
+}
+
+[class^="type-20"]{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-image: url(../img/right-top-panel-controls.png);
+	-webkit-background-size: 20px 40px;
+	background-size: 20px 40px;
+}
+.type-20-join{
+	background-position: 0 -20px;
+}
+.ul-dotted{
+	border-bottom: 1px dotted;
+	line-height: 1;
+}
+
+.switch{
+	display: inline-block;
+	height: 15px;
+	background-image: url(../img/switch.png);
+	-webkit-background-size: 50px 30px;
+	background-size: 50px 30px;
+	line-height: 15px;
+	font-size: 11px;
+	color: #fff;
+}
+.switch.on{
+	background-position: 0 0;
+	padding-left: 12px;
+	width: 38px;
+}
+.switch.off{
+	background-position: 0 -15px;
+	padding-left: 24px;
+	width: 26px;
+}
+
+[class^="type8"]{
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	background-image: url(../img/t8-controls.png);
+	-webkit-background-size: 24px 16px;
+	background-size: 24px 16px;
+}
+.type8-delete{
+	background-position: 0 -8px;
+}
+.type8-delete.active{
+	background-position: 0 0;
+}
+.type8-plus{
+	background-position: -8px -8px;
+}
+.type8-plus.active{
+	background-position: -8px 0;
+}
+.type8-minus{
+	background-position: -16px -8px;
+}
+.type8-minus.active{
+	background-position: -16px 0;
+}
