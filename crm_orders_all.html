@@ -7,11 +7,14 @@
 	
 	<link rel="stylesheet" href="css/jquery.jscrollpane.css">
 	<link rel="stylesheet" href="css/crm-bootstrap.css">
+	<link rel="stylesheet" href="css/jquery.datepick.css">
 	<link rel="stylesheet" href="css/main.css">
 
 	<script src="js/lib/jquery-1.11.1.min.js"></script>
 	<script src="js/lib/jquery.jscrollpane.min.js"></script>
 	<script src="js/lib/jquery.mousewheel.js"></script>
+	<script src="js/lib/jquery.datepick.js"></script>
+	<script src="js/lib/jquery.datepick-ru.js"></script>
 
 	<script src="js/app.js"></script>
 
@@ -24,7 +27,7 @@
 
 <div id="page" class="container">
 	<header>
-		<div class="inline-block vat"><a id="main-menu-button" class="inline-block" href="#"></a></div>
+		<div class="inline-block vat"><a id="main-menu-button" class="inline-block active" href="#"></a></div>
 
 		<ul id="top-menu" class="inline-menu inline-block vat">
 			<li><a href="#">Товары</a></li>
@@ -78,7 +81,23 @@
 			<section id="top-panel">
 				<div id="top-panel-controls">
 					<span class="add type-22"></span>
-					<span class="filter type-22"></span>
+					<span class="filter type-22" id="filter-button"></span>
+					<div class="popover blue" id="filter-popover">
+						<div class="popover-content">
+							<div class="date">Дата:  
+								<input type="text" id="filter-range" value="--.--.---- - --.--.----">
+								<span class="calendar-icon"></span>
+							</div>
+							<div class="status">Статус: <a href="#" class="ul-dotted">Выполнен</a></div>
+							<div class="only">Показать только: 
+								<span class="important active type-22 vam"></span>
+								<span class="vip active type-22 vam"></span>
+							</div>
+							<div class="action">
+								<a href="#" class="button blue">Ok</a>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div id="search-order-form">
 					<input type="text" id="search-box" placeholder="Номер заказа или телефона">
@@ -292,7 +311,23 @@
 				</aside>
 				<section id="final-content"  class="inline-block vat">
 					<!-- @TODO: Steps menu -->
-					<!-- @TODO: Contacts form -->
+					<div class="contact-info">
+						<div class="user">
+							<div class="name">Константин Константинович Константинопольский</div>
+							<div class="phone">+7 (958) 227-23-50, +7 (963) 123-45-67</div>
+							<div class="email">konstantinopolskiy.konstantin@gmail.com</div>
+						</div>
+						<div class="additional fr">
+							<div class="payment">
+								<div class="title">Способ оплаты</div>
+								<div class="value"><a href="" class="ul-dotted">Яндекс деньги</a></div>
+							</div>
+							<div class="status">
+								<div class="title">Статус</div>
+								<div class="value"><a href="" class="ul-dotted">Не оплачен</a></div>
+							</div>
+						</div>
+					</div>
 					<table id="orders-table">
 						<tr>
 							<td>
@@ -345,6 +380,91 @@
 							</td>
 						</tr>
 					</table>
+					<div id="order-summary">
+						<div class="add-more">
+							<a href="#" id="add-more" class="ul-dotted"><span class="add-plus-10"></span>Добавить товар</a>
+							<div class="popover gray" id="add-more-popover">
+								<div class="popover-content">
+									<div class="sort">
+										<a href="#" class="ul-dotted active">Артикул</a>
+										<a href="#" class="ul-dotted">Модель</a>
+										<a href="#" class="ul-dotted">Аналог</a>
+										<input type="text" placeholder="Введите артикул">
+									</div>
+									<table id="more-goods">
+										<thead>
+											<tr>
+												<th>Артикул</th>
+												<th>Фото</th>
+												<th>Наименование</th>
+												<th>Цена</th>
+												<th>Остаток</th>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>093921</td>
+												<td><img src="2.jpg" alt=""></td>
+												<td>Аккумулятор R519</td>
+												<td>1890 р.</td>
+												<td>1</td>
+												<td><span class="add-plus-12"></span></td>
+											</tr>
+											<tr>
+												<td>093921</td>
+												<td><img src="2.jpg" alt=""></td>
+												<td>Аккумулятор R519</td>
+												<td>1890 р.</td>
+												<td>1</td>
+												<td><span class="add-plus-12"></span></td>
+											</tr>
+											<tr>
+												<td>093921</td>
+												<td><img src="2.jpg" alt=""></td>
+												<td>Аккумулятор R519</td>
+												<td>1890 р.</td>
+												<td>1</td>
+												<td><span class="add-plus-12"></span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="summary fr">
+							<div class="line"><span class="title">Стоимость: </span><span class="value">244 000 руб.</span></div>
+							<div class="line"><span class="title">Доставка: </span><span class="value">230 руб.</span></div>
+							<div class="line bold"><span class="title">Итого: </span><span class="value">244 230 руб.</span></div>
+						</div>
+					</div>
+					<div id="order-total">
+						<div class="summary">
+							<div class="line">
+								<span class="title">Способ доставки</span>
+								<span class="value">Пункт выдачи <a href="#" class="ul-dotted">Условия</a></span>
+							</div>
+							<div class="line">
+								<span class="title">Населенный пункт</span>
+								<span class="value">Волгодонск, Ростовская область</span>
+							</div>
+							<div class="line">
+								<span class="title">Адрес</span>
+								<span class="value">ул. Гагарина, д. 10, с. 3, кв. 10</span>
+							</div>
+							<div class="line">
+								<span class="title">Дата доставки</span>
+								<span class="value">01.02.2014, с 10:00 до 15:00<span class="calendar-icon"></span></span>
+							</div>
+							<div class="line">
+								<span class="title">Комментарий</span>
+								<span class="value">перед доставкой позвонить</span>
+							</div>
+						</div>
+					</div>
+					<div id="order-bottom">
+						<span class="type">Тип: <a href="#" class="ul-dotted">Телефон</a></span><span class="manager">Менеджер: <a href="#" class="ul-dotted">Константин Тернопольский</a></span>
+					</div>
 				</section>
 
 			</section>

@@ -38,3 +38,18 @@ span.add{
 [class^="type8"]{
 	background-image: url(../img/ie8/t8-controls.png);
 }
+.popover:before{
+	background-image: url(../img/ie8/popover-corners.png);
+}
+
+.contact-info .user > *{
+	background-image: url(../img/ie8/contact-info.png) no-repeat;
+}
+
+.calendar-icon{
+	background-image: url(../img/ie8/calendar.png);
+}
+
+[class^="add-plus-"]{
+	background-image: url(../img/ie8/add-plus.png);
+}
