@@ -53,3 +53,7 @@ span.add{
 [class^="add-plus-"]{
 	background-image: url(../img/ie8/add-plus.png);
 }
+
+.question{
+	background-image: url(../img/ie8/question.png);
+}

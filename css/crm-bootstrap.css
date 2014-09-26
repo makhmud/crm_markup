@@ -36,6 +36,14 @@ ul.inline-menu li{
 	vertical-align: top;
 }
 
+.green, a.green{
+	color: #00ba55;
+}
+
+.tdn{
+	text-decoration: none;
+}
+
 span.type-22{
 	display: inline-block;
 	width: 22px;
@@ -144,6 +152,15 @@ span.add{
 	background-position: -16px 0;
 }
 
+.question{
+	width: 11px;
+	height: 11px;
+	display: inline-block;
+	background-image: url(../img/question.png);
+	-webkit-background-size: 11px 11px;
+	background-size: 11px 11px;
+}
+
 .popover{
 	position: absolute;
 	display: inline-block;
@@ -233,6 +250,7 @@ form.standart .form-group{
 form.standart .form-item, form.standart .form-item .line{
 	margin-bottom: 10px;
 }
+
 form.standart .form-item .line:last-child{
 	margin-bottom: 0;
 }
@@ -248,12 +266,16 @@ form.standart label{
 }
 form.standart input[type="text"], form.standart input[type="email"], form.standart input[type="number"], form.standart textarea, .select .text{
 	width: 153px;
-	padding:3px 7px;
+	padding: 4px 7px;
 	border-radius: 3px;
 	border: 1px solid #ddd;
 }
+form.standart input.error{
+	border-color: #ea6c6c;
+}
 form.standart input[type="text"], form.standart input[type="email"], form.standart input[type="number"], .jqselect{
 	margin-right: 16px;
+	outline: none;
 }
 form.standart textarea{
 	width: 346px;
@@ -274,8 +296,17 @@ form.standart select.small+.jqselect .select .text{
 form.standart select.small+.jqselect .dropdown ul{
 	width: 41px;
 }
+form.standart select.long+.jqselect .select .text{
+	width: 340px;
+}
+form.standart select.long+.jqselect .dropdown ul{
+	width: 354px;
+}
 form.standart input.large{
 	width: 277px;
+}
+form.standart .form-item.textarea label{
+	vertical-align: top;
 }
 form.standart .field-group{
 	display: inline-block;
@@ -283,4 +314,10 @@ form.standart .field-group{
 }
 .checkbox{
 	display: inline-block;
+}
+form.standart .checkbox label{
+	width: auto;
+}
+.input-date-single{
+	width: 100px !important;
 }

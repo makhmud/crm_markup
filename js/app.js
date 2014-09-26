@@ -8,14 +8,21 @@ var widthAdapt = function() {
 	$('#final-content').width(finalContentOffset);
 }
 
+var heightAdapt = function() {
+	$('#final-content').height( $('#main').height() );
+}
+
 $(document).ready( function() {
 	widthAdapt();
+	heightAdapt();
 
-	$('select, input').styler();
+	if (typeof( $().styler ) != 'undefined'){
+		$('select, input').styler();
+	}
 
 	$('.scrollpane').jScrollPane();
 
-	$('#filter-range').datepick({ 
+	$('#filter-range, .input-date-range').datepick({ 
 	    rangeSelect: true, 
 	    dateFormat: 'dd.mm.yyyy',
 	    showTrigger: '.calendar-icon',
@@ -33,18 +40,30 @@ $(document).ready( function() {
         {picker: $.datepick.defaultRenderer.picker. 
             replace(/\{link:clear\}/, ''). 
             replace(/\{link:close\}/, '')}), 
-	    onSelect: function (){
-	    	console.log($('.datepick-selected'));
-		    $('.datepick-selected').css({
-		    	'border-bottom-left-radius': '10px',
-				'border-top-left-radius': '10px'
-		    })
-	    }
+	   //  onSelect: function (){
+	   //  	console.log($('.datepick-selected'));
+		  //   $('.datepick-selected').css({
+		  //   	'border-bottom-left-radius': '10px',
+				// 'border-top-left-radius': '10px'
+		  //   })
+	   //  }
 	});
+	$('.input-date-single').datepick({
+	    dateFormat: 'dd.mm.yyyy',
+	    showTrigger: '.input-date-single + .calendar-icon',
+	    prevText: '<', todayText: 'MM yyyy', nextText: '>',
+	    commandsAsDateFormat: true,
+	    pickerClass: 'popover gray',
+	    renderer: $.extend({}, $.datepick.defaultRenderer, 
+        {picker: $.datepick.defaultRenderer.picker. 
+            replace(/\{link:clear\}/, ''). 
+            replace(/\{link:close\}/, '')}), 
+	})
 })
 
 window.onresize = function () {
 	widthAdapt();
+	heightAdapt();
 }
 
 $(document).on('click', '#main-menu-button', function(e) {
