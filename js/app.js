@@ -1,8 +1,9 @@
 var widthAdapt = function() {
 	$('#top-panel').width( $('#page').width() - $('#left-sidebar').width() );
 	var finalContentOffset = $('#top-panel').width() - $('#order-list-wrapper').width();
-	if ( finalContentOffset>=864) {
-		finalContentOffset = 864;
+	var maxWidth = 1104 - $('#order-list-wrapper').width();
+	if ( finalContentOffset>=maxWidth) {
+		finalContentOffset = maxWidth;
 	}
 	$('#final-content').width(finalContentOffset);
 }

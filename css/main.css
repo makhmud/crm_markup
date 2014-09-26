@@ -203,6 +203,9 @@ span.count{
 	display: inline-block;
 	vertical-align: middle;
 }
+#right-top-menu [class^="type-20"]{
+	margin-right: 6px;
+}
 
 
 
@@ -306,7 +309,7 @@ span.count{
 	padding: 15px;
 }
 .item-info .info{
-	width: 350px;
+	width: 330px;
 }
 
 .item-info > *{

@@ -1,0 +1,40 @@
+#main-menu-button{
+	background-image: url(../img/ie8/main-menu-button.png);
+}
+
+#profile-menu a>span{
+	background-image: url(../img/ie8/profile-menu-icons.png);
+}
+
+#left-menu span[class^="icon-"]{
+	background-image: url(../img/ie8/left-menu.png);
+}
+
+span.vip{
+	background-image: url(../img/ie8/vip.png);
+}
+span.important{
+	background-image: url(../img/ie8/important.png);
+}
+span.filter{
+	background-image: url(../img/ie8/filter.png);
+}
+span.add{
+	background-image: url(../img/ie8/add.png);
+}
+
+.repeat-button{
+	background-image: url(../img/ie8/repeat.png);
+}
+
+[class^="type-20"]{
+	background-image: url(../img/ie8/icons2.png);
+}
+
+.switch{
+	background-image: url(../img/ie8/switch.png);
+}
+
+[class^="type8"]{
+	background-image: url(../img/ie8/t8-controls.png);
+}
