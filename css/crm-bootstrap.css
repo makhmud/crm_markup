@@ -181,6 +181,7 @@ span.add{
 	display: inline-block;
 	text-decoration: none;
 	border-radius: 2px;
+	border: none;
 }
 
 .calendar-icon{
@@ -222,4 +223,64 @@ span.add{
 }
 .summary .line{
 	margin: 5px 0;
+}
+
+form.standart .form-group{
+	border-bottom: 1px solid #f8f8f8;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+form.standart .form-item, form.standart .form-item .line{
+	margin-bottom: 10px;
+}
+form.standart .form-item .line:last-child{
+	margin-bottom: 0;
+}
+form.standart .form-item.inline{
+	display: inline-block;
+	vertical-align: middle;
+}
+form.standart label{
+	font-weight: bold;
+	width: 147px;
+	display: inline-block;
+	vertical-align: middle;
+}
+form.standart input[type="text"], form.standart input[type="email"], form.standart input[type="number"], form.standart textarea, .select .text{
+	width: 153px;
+	padding:3px 7px;
+	border-radius: 3px;
+	border: 1px solid #ddd;
+}
+form.standart input[type="text"], form.standart input[type="email"], form.standart input[type="number"], .jqselect{
+	margin-right: 16px;
+}
+form.standart textarea{
+	width: 346px;
+}
+form.standart .select + .dropdown ul{
+	width: 169px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 0 0 3px 3px;
+}
+form.standart input.small{
+	width: 27px;
+}
+form.standart select.small+.jqselect .select .text{
+	width: 27px;
+	height: 17px;
+}
+form.standart select.small+.jqselect .dropdown ul{
+	width: 41px;
+}
+form.standart input.large{
+	width: 277px;
+}
+form.standart .field-group{
+	display: inline-block;
+	vertical-align: top;
+}
+.checkbox{
+	display: inline-block;
 }

@@ -10,7 +10,11 @@ var widthAdapt = function() {
 
 $(document).ready( function() {
 	widthAdapt();
+
+	$('select, input').styler();
+
 	$('.scrollpane').jScrollPane();
+
 	$('#filter-range').datepick({ 
 	    rangeSelect: true, 
 	    dateFormat: 'dd.mm.yyyy',
@@ -50,6 +54,7 @@ $(document).on('click', '#main-menu-button', function(e) {
 });
 
 $(document).on('click', '#filter-button', function() {
+	$('#filter-button').toggleClass('active');
 	$('#filter-popover').fadeToggle();
 });
 $(document).on('click', '#add-more', function(e) {

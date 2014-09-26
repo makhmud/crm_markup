@@ -7,11 +7,16 @@
 
 	<link rel="stylesheet" href="css/jquery.jscrollpane.css">
 	<link rel="stylesheet" href="css/crm-bootstrap.css">
+	<link rel="stylesheet" href="css/jquery.datepick.css">
+	<link rel="stylesheet" href="css/jquery.formstyler.css">
 	<link rel="stylesheet" href="css/main.css">
 
 	<script src="js/lib/jquery-1.11.1.min.js"></script>
 	<script src="js/lib/jquery.jscrollpane.min.js"></script>
 	<script src="js/lib/jquery.mousewheel.js"></script>
+	<script src="js/lib/jquery.datepick.js"></script>
+	<script src="js/lib/jquery.datepick-ru.js"></script>
+	<script src="js/lib/jquery.formstyler.min.js"></script>
 
 	<script src="js/app.js"></script>
 
@@ -22,10 +27,9 @@
 </head>
 <body>
 
-
 <div id="page" class="container">
 	<header>
-		<div class="inline-block vat"><a id="main-menu-button" class="inline-block" href="#"></a></div>
+		<div class="inline-block vat"><a id="main-menu-button" class="inline-block active" href="#"></a></div>
 
 		<ul id="top-menu" class="inline-menu inline-block vat">
 			<li><a href="#">Товары</a></li>
@@ -79,7 +83,23 @@
 			<section id="top-panel">
 				<div id="top-panel-controls">
 					<span class="add type-22"></span>
-					<span class="filter type-22"></span>
+					<span class="filter type-22" id="filter-button"></span>
+					<div class="popover blue" id="filter-popover">
+						<div class="popover-content">
+							<div class="date">Дата:  
+								<input type="text" id="filter-range" value="--.--.---- - --.--.----">
+								<span class="calendar-icon"></span>
+							</div>
+							<div class="status">Статус: <a href="#" class="ul-dotted">Выполнен</a></div>
+							<div class="only">Показать только: 
+								<span class="important active type-22 vam"></span>
+								<span class="vip active type-22 vam"></span>
+							</div>
+							<div class="action">
+								<a href="#" class="button blue">Ok</a>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div id="search-order-form">
 					<input type="text" id="search-box" placeholder="Номер заказа или телефона">
@@ -292,13 +312,103 @@
 					</div>
 				</aside>
 				<section id="final-content"  class="inline-block vat">
-					
+					<div id="order-form-wrap">
+						<form action="/" id="order-form" class="standart">
+							<div class="form-group">
+								<div class="form-item">
+									<label for="city">Hаселенный пункт:</label>
+									<input type="text" id="city">
+									<select name="" id="district">
+										<option value="1">В пределах МКАД</option>
+										<option value="2">В пределах МКАД</option>
+										<option value="3">В пределах МКАД</option>
+										<option value="4">В пределах МКАД</option>
+										<option value="5">В пределах МКАД</option>
+									</select>
+								</div>
+								<div class="form-item">
+									<label for="delivery-type">Способ доставки:</label>
+									<select name="" id="delivery-type">
+										<option value="1">Курьером</option>
+										<option value="2">Почтой</option>
+									</select>
+								</div>
+								<div class="form-item">
+									
+									<label for="">Адрес доставки:</label>
+									<div class="field-group">
+										<div class="line">
+											<select name="" id="" class="small">
+												<option value="">ул.</option>
+											</select>
+											<input type="text" class="large">
+											<div class="checkbox"><input type="checkbox"><label for="">не найдено</label></div>
+										</div>
+										<div class="line">
+											<input class="small" type="text" placeholder="Дом">
+											<input class="small" type="text" placeholder="Кор">
+											<input class="small" type="text" placeholder="Стр">
+											<input class="small" type="text" placeholder="Под">
+											<input class="small" type="text" placeholder="Эт">
+											<input class="small" type="text" placeholder="Кв">
+											<input class="small" type="text" placeholder="Код">
+										</div>
+									</div>
+								</div>
+								<div class="form-item inline">
+									<label for="">Дата доставки:</label>
+									<input type="text">
+									<span class="icon-calendar"></span>
+								</div>
+								<div class="form-item inline">
+									<label for="">Время :</label>
+									<select name="" id="">
+										<option value="1">10:00-15:00</option>
+										<option value="2">10:00-15:00</option>
+										<option value="3">10:00-15:00</option>
+									</select>
+								</div>
+								<div class="form-item">
+									<label for="">Способ оплаты:</label>
+									<select name="" id="">
+										<option value="1">При получении</option>
+										<option value="2">При получении</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="form-item">
+									<label for="">Покупатель:</label>
+									<input type="text">
+									<input type="text">
+									<input type="text">
+								</div>
+								<div class="form-item">
+									<label for="">Телефон:</label>
+									<input type="text">
+									<input type="text">
+								</div>
+								<div class="form-item">
+									<label for="">E-mail:</label>
+									<input type="text">
+								</div>
+								<div class="form-item">
+									<label for="">Комментарий:</label>
+									<textarea name="" id="" cols="30" rows="10"></textarea>
+								</div>
+								<div class="form-item">
+									<input type="submit" value="Принять" class="button blue">
+								</div>
+							</div>
+						</form>
+					</div>
 				</section>
 
 			</section>
 		</section>
 	</section>
 </div>
+
 
 </body>
 </html>
