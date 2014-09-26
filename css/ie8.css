@@ -57,3 +57,7 @@ span.add{
 .question{
 	background-image: url(../img/ie8/question.png);
 }
+
+[class^=grade-control]{
+	background-image: url(../img/ie8/grade-controls.png);
+}

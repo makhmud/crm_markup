@@ -113,6 +113,7 @@ span.add{
 	line-height: 15px;
 	font-size: 11px;
 	color: #fff;
+	text-align: left;
 }
 .switch.on{
 	background-position: 0 0;
@@ -227,6 +228,30 @@ span.add{
 	background-size: 10px 10px;
 	width: 10px;
 	height: 10px;
+}
+
+[class^=grade-control]{
+	background-image: url(../img/grade-controls.png);
+	-webkit-background-size: 17px 85px;
+	background-size: 17px 85px;
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+}
+.grade-control-1{
+	background-position: 0 0;
+}
+.grade-control-2{
+	background-position: 0 -17px;
+}
+.grade-control-3{
+	background-position: 0 -34px;
+}
+.grade-control-4{
+	background-position: 0 -51px;
+}
+.grade-control-5{
+	background-position: 0 -68px;
 }
 
 .summary .title{

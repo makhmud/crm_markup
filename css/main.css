@@ -526,3 +526,20 @@ tbody .datepick-selected:last-child{
 #order-form-wrap #orders-table .amount{
 	text-align: center;
 }
+
+#grade-table{
+	border-collapse: collapse;
+	width: 100%;
+}
+#grade-table tr > *{
+	border: 1px solid #f2f2f2;
+	text-align: center;
+	padding: 10px 0;
+}
+#grade-table tr:hover td{
+	background-color: #f9f9f9;
+	border-color: #f9f9f9;
+}
+#grade-table img{
+	vertical-align: middle;
+}
