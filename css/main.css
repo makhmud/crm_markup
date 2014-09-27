@@ -56,7 +56,7 @@ header{
 }
 
 #profile-menu a{
-	padding: 5px 11px 0 7px;
+	padding: 5px 18px 0 3px;
 	height: 33px;
 }
 #profile-menu li:first-child a{
@@ -206,6 +206,9 @@ span.count{
 	outline: none;
 	width: 143px;
 	margin: -4px 0 0;
+}
+body.delivery #search-order-form input{
+	width: 224px;
 }
 
 #right-top-menu{
@@ -607,11 +610,62 @@ tbody .datepick-selected:last-child{
 	min-width: 1095px;
 	margin: 10px;
 }
-#delivery-table tr>*, #delivery-table tr td:nth-child(1) time{
+#delivery-table th, #delivery-table tr td:nth-child(1) time{
 	padding: 8px;
+}
+#delivery-table tbody td{
+	padding: 5px 10px;
+}
+#delivery-table .delivery-icon-2{
+	margin-left: 10px;
+}
+#delivery-table tr td:nth-child(1) time{
+	display: block;
+	text-align: center;
+}
+#delivery-table tr>*:nth-child(1){
+	width: 9%;
+}
+#delivery-table tr>*:nth-child(2){
+	width: 9%;
+}
+#delivery-table tr>*:nth-child(3){
+	width: 13%;
+}
+#delivery-table tr>*:nth-child(4){
+	width: 10%;
+}
+#delivery-table tr>*:nth-child(5){
+	width: 9%;
+	text-align: center;
+}
+#delivery-table tr>*:nth-child(6){
+	text-align: center;
+	width: 9%;
+}
+#delivery-table tr>*:nth-child(7){
+	text-align: center;
+	width: 8%;
+}
+#delivery-table tr>*:nth-child(8){
+	width: 10%;
+}
+#delivery-table tr>*:nth-child(9){
+	text-align: center;
+	width: 15%;
+}
+#delivery-table tr>*:nth-child(10){
+	text-align: center;
+	width: 10%;
 }
 #delivery-table tr td:nth-child(1){
 	padding: 0;
+}
+#delivery-table th{
+
+}
+#delivery-table + .paginetion{
+	margin-top: 18px;
 }
 
 #steps-menu{
@@ -762,4 +816,12 @@ tbody .datepick-selected:last-child{
 
 #right-top-menu .vip.type-22{
 	margin-right: 37px;
+}
+#right-top-menu .repeat-button-2{
+	vertical-align: middle;
+	margin: 0 8px 0 26px;
+}
+#right-top-menu .text{
+	margin-top: 2px;
+	display: inline-block;
 }

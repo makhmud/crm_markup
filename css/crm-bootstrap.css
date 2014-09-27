@@ -94,6 +94,14 @@ span.add{
 	-webkit-background-size: 20px 25px;
 	background-size: 20px 25px;
 }
+.repeat-button-2{
+	background-image: url(../img/repeat-2.png);
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	-webkit-background-size: 16px 16px;
+	background-size: 16px 16px;
+}
 
 [class^="type-20"]{
 	display: inline-block;
@@ -331,8 +339,23 @@ span.add{
 	background-position: -18px -9px;
 }
 
+.pagination{
+	margin-top: 18px;
+}
 .pagination > *{
 	display: inline-block;
+}
+.pagination .pages > *{
+	margin: 0 5px;
+}
+.pagination .pages{
+	padding: 2px 14px;
+}
+.pagination .paging{
+	padding: 2px 14px;
+}
+.pagination .paging > *{
+	margin: 0 5px;
 }
 
 .warning{
