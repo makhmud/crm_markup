@@ -556,16 +556,16 @@ tbody .datepick-selected:last-child{
 	margin: 0 24px;
 }
 
-#order-form{
+form[id^="order-form"]{
 	margin: 0 23px;
 }
-#order-form label[for="delivery_time"]{
+form[id^="order-form"] label[for="delivery_time"]{
 	width: 55px;
 }
-#order-form #delivery_time-styler .select .text{
+form[id^="order-form"] #delivery_time-styler .select .text{
 	width: 93px;
 }
-#order-form input[type="submit"]{
+form[id^="order-form"] input[type="submit"]{
 	margin-left: 147px;
 	padding: 5px 8px;
 }
@@ -848,7 +848,7 @@ tbody .datepick-selected:last-child{
 }
 
 #right-top-menu .vip.type-22{
-	margin-right: 37px;
+	margin-right: 18px;
 }
 #right-top-menu .repeat-button-2{
 	vertical-align: middle;
@@ -861,4 +861,12 @@ tbody .datepick-selected:last-child{
 
 body.grade .summary{
 	padding: 8px 0px 0 10px;
+}
+
+#street-wrap{
+	position: relative;
+}
+
+#order-form-2{
+	margin: 20px 23px 0;
 }

@@ -466,12 +466,21 @@ form.standart input[type="text"], form.standart input[type="email"], form.standa
 .jq-checkbox{
 	margin-right: 4px;
 }
+.jq-selectbox .trigger .arrow{
+	border: none;
+	background-image: url(../img/select-arrow.png);
+	-webkit-background-size: 5px 4px;
+	background-size: 5px 4px;
+	opacity: 1;
+	height: 4px;
+	width: 5px;
+}
 
 form.standart .field-group input[type="text"], form.standart .field-group input[type="email"], form.standart .field-group input[type="number"], .field-group  .jqselect{
 	margin-right: 10px;
 }
 form.standart textarea{
-	width: 331px;
+	width: 342px;
 	height: 92px;
 }
 form.standart .select + .dropdown ul{
@@ -492,7 +501,7 @@ form.standart select.small+.jqselect .dropdown ul{
 	width: 41px;
 }
 form.standart select.long+.jqselect .select .text{
-	width: 340px;
+	width: 340px !important;
 }
 form.standart select.long+.jqselect .dropdown ul{
 	width: 354px;
@@ -555,4 +564,16 @@ form.standart .checkbox label{
 
 td.checked-wrap{
 	background-color: #0099de;
+}
+
+.search-results{
+	width: 285px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	z-index: 200;
+	border-radius: 0 0 4px 4px;
+}
+.search-results .search-item{
+	padding: 5px 10px;
+	color: #c2c2c2;
 }

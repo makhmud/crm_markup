@@ -6,12 +6,14 @@
 	<title>crm_orders_add_3</title>
 
 	<link rel="stylesheet" href="css/jquery.jscrollpane.css">
+	<link rel="stylesheet" href="css/jquery.formstyler.css">
 	<link rel="stylesheet" href="css/crm-bootstrap.css">
 	<link rel="stylesheet" href="css/main.css">
 
 	<script src="js/lib/jquery-1.11.1.min.js"></script>
 	<script src="js/lib/jquery.jscrollpane.min.js"></script>
 	<script src="js/lib/jquery.mousewheel.js"></script>
+	<script src="js/lib/jquery.formstyler.min.js"></script>
 
 	<script src="js/app.js"></script>
 
@@ -292,7 +294,100 @@
 					</div>
 				</aside>
 				<section id="final-content"  class="inline-block vat">
-					
+					<div id="order-form-wrap">
+						<div id="items-list">
+							<div class="no-items">
+								Товар не выбран. <a href="#" class="ul-dotted">Добавить товар</a>
+							</div>
+						</div>
+						<div class="form-wrap">
+							<form action="/" id="order-form" class="standart">
+								<div class="form-group">
+									<div class="form-item">
+										<label for="city">Hаселенный пункт:</label>
+										<input type="text" id="city">
+										<select name="" id="district">
+											<option value="1">В пределах МКАД</option>
+											<option value="2">В пределах МКАД</option>
+											<option value="3">В пределах МКАД</option>
+											<option value="4">В пределах МКАД</option>
+											<option value="5">В пределах МКАД</option>
+										</select>
+									</div>
+									<div class="form-item">
+										<label for="delivery-type">Способ доставки:</label>
+										<select name="" id="delivery-type">
+											<option value="1">Курьером</option>
+											<option value="2">Почтой</option>
+										</select>
+									</div>
+									<div class="form-item">
+										
+										<label for="">Адрес доставки:</label>
+										<div class="field-group">
+											<div class="line">
+												<select name="" id="" class="small">
+													<option value="">ул.</option>
+												</select>
+												<span id="street-wrap">
+													<input type="text" class="large" id="street">
+												</span>
+											</div>
+											<div class="line">
+												<input class="small" type="text" placeholder="Дом">
+												<input class="small" type="text" placeholder="Стр">
+												<input class="small" type="text" placeholder="Кв">
+											</div>
+										</div>
+									</div>
+									<div class="form-item inline delivery-date">
+										<label for="delivery_date">Дата доставки:</label>
+										<input type="text" name="delivery_date" class="input-date-single" id="delivery_time" placeholder="__.__.____">
+										<span class="calendar-icon"></span>
+									</div>
+									<div class="form-item inline delivery-time">
+										<label for="delivery_time">Время :</label>
+										<select name="delivery_time" id="delivery_time">
+											<option value="1">10:00-15:00</option>
+											<option value="2">10:00-15:00</option>
+											<option value="3">10:00-15:00</option>
+										</select>
+									</div>
+									<div class="form-item">
+										<label for="">Способ оплаты:</label>
+										<select name="" id="">
+											<option value="1">При получении</option>
+											<option value="2">При получении</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="form-item">
+										<label for="">Покупатель:</label>
+										<input type="text" placeholder="Фамилия">
+										<input type="text" placeholder="Имя">
+										<input type="text" placeholder="Отчество">
+									</div>
+									<div class="form-item">
+										<label for="">Телефон:</label>
+										<input type="text" class="error" name="phone[]">
+										<input type="text" name="phone[]">
+									</div>
+									<div class="form-item">
+										<label for="">E-mail:</label>
+										<input type="email" name="delivery_email">
+									</div>
+									<div class="form-item textarea">
+										<label for="">Комментарий:</label>
+										<textarea name="" id="" cols="30" rows="10"></textarea>
+									</div>
+									<div class="form-item">
+										<input type="submit" value="Принять" class="button blue">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
 				</section>
 
 			</section>

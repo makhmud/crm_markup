@@ -32,7 +32,33 @@ $(document).ready( function() {
 		$('select, input').styler();
 	}
 
-	$('.scrollpane').jScrollPane();
+	$(document).on('keyup', '#street', function() {
+
+		$('.search-results').remove();
+
+		var template = '<div class="search-results">';
+
+		for(var i=0; i<5; i++){
+			template += '<div class="search-item">' + $(this).val() + '</div>'
+		}
+
+		template += '</div>';
+
+		$(this).after(template);
+		$('.search-results').css({
+			'position': 'absolute',
+			'top' : $(this).height() + 'px',
+			'left' : '0'
+		})
+	});
+
+	$(document).on('blur', '#street', function() {
+		$('.search-results').remove();
+	})
+
+	$('.scrollpane').jScrollPane({
+		mouseWheelSpeed: 20
+	});
 
 	if (typeof( $().datepick ) != 'undefined'){
 		$('#filter-range, .input-date-range').datepick({ 
