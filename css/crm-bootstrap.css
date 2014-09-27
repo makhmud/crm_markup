@@ -5,6 +5,7 @@ a, a:visited{
 
 input, textarea{
 	font-family: 'Tahoma';
+	outline: none;
 }
 
 table{
@@ -170,19 +171,30 @@ span.add{
 }
 
 .popover{
-	position: absolute;
+	position: absolute !important;
 	display: inline-block;
 	border-radius: 3px;
 	border-width: 1px;
 	border-style: solid;
 	background-color: #fff;
 	z-index: 1000;
+	line-height: 1;
+	color: #333;
+	font-size: 11px;
+}
+.popover ul{
+	position: relative !important;
 }
 .popover.gray{
 	border-color: #e8e8e8;
 }
 .popover.blue{
 	border-color: #3498db;
+}
+.popover.green{
+	border: none;
+	background-color: #009544;
+	color: #fff;
 }
 .popover:before{
 	content: '';
@@ -198,8 +210,16 @@ span.add{
 .popover.gray:before{
 	background-position: 0 -8px;
 }
+.popover.green:before{
+	width: 14px;
+	height: 7px;
+	top: -7px;
+	background-image: url(../img/green-popover-corner.png);
+	-webkit-background-size: 14px 7px;
+	background-size: 14px 7px;
+}
 
-.button{
+.button, a.button{
 	padding: 4px 11px;
 	color: #fff;
 	display: inline-block;
@@ -212,6 +232,7 @@ span.add{
 }
 .button.green{	
 	background-color: #009544;
+	color: #fff;
 }
 
 .calendar-icon{
@@ -365,7 +386,7 @@ span.add{
 	display: inline-block;
 }
 .summary .line{
-	margin: 5px 0;
+	margin-bottom: 10px;
 }
 
 form.standart .form-group{
@@ -463,4 +484,19 @@ form.standart .checkbox label{
 }
 .payment-icon-qiwi{
 	background-image: url(../img/payments/qiwi.png);
+}
+
+.green-input{
+	border: none;
+	background-color: #66bf8f;
+	box-shadow: 0 1px 1px rgba(208, 208, 208, .4) inset;
+	border-radius: 3px;
+} 
+
+.edit-input-icon{
+	background-image: url(../img/pen.png);
+	-webkit-background-size: 11px 11px;
+	background-size: 11px 11px;
+	background-repeat: no-repeat;
+	background-position: 97% center;
 }

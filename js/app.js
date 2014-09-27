@@ -9,12 +9,21 @@ var widthAdapt = function() {
 }
 
 var heightAdapt = function() {
-	$('#final-content').height( $('#main').height() );
+	var pageHeight = $('#page').outerHeight() - $('header').outerHeight();
+	var topPanelHeight = $('#top-panel').outerHeight();
+	var contentHeight = $('#inner-content').outerHeight() + topPanelHeight;
+	var neededHeight = (pageHeight>contentHeight) ? pageHeight : contentHeight;
+	console.log( pageHeight, topPanelHeight, contentHeight, neededHeight, $('#inner-content').outerHeight() );
+	$('#left-sidebar').height( neededHeight );
+	$('#inner-content').height( neededHeight - topPanelHeight );
+}
+
+window.onload = function() {
+	widthAdapt();
+	heightAdapt();
 }
 
 $(document).ready( function() {
-	widthAdapt();
-	heightAdapt();
 
 	if (typeof( $().styler ) != 'undefined'){
 		$('select, input').styler();
@@ -84,6 +93,11 @@ $(document).on('click', '#add-more', function(e) {
 	$('#add-more-popover').fadeToggle();
 });
 
-$(document).on('click', '#steps-menu li', function() {
-	$(this).find('ul').fadeToggle();
-})
+$(document).on('click', '#steps-menu li .text', function() {
+	$(this).siblings('ul').fadeToggle();
+});
+
+$(document).on('click', '#order-cancel', function(e) {
+	e.preventDefault();
+	$(this).siblings('.popover').fadeToggle();
+});

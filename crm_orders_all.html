@@ -312,13 +312,33 @@
 				<section id="final-content"  class="inline-block vat">
 					<div id="steps-menu-wrap">
 						<ul id="steps-menu"class="inline-menu">
-							<li class="active"><span class="warning fl">
-								</span> <span>Отмена</span> <span class="hm-arrows"></span>
+							<li class="active">
+								<div class="text">
+									<span class="warning fl">
+										<span class="popover blue">
+											Не дозвонились до клиента
+										</span>
+									</span> 
+									<span>Отмена</span> 
+									<span class="hm-arrows"></span>
+								</div>
 								<ul class="sub-menu">
 									<li>Новый</li>
 									<li>В обработке </li>
 									<li>Подтвержден </li>
-									<li><a href="#" class="button green">Отмена</a></li>
+									<li>
+										<a href="#" class="button green" id="order-cancel">Отмена</a>
+										<div class="popover green">
+											<ul>
+												<li><a href="#">не дозвонились</a></li>
+												<li><a href="#">товара нет в наличии</a></li>
+												<li><a href="#">не устроили условия</a></li>
+												<li><a href="#">купил в другом месте</a></li>
+												<li><a href="#">хулиганство </a></li>
+												<li><input type="text" class="green-input edit-input-icon"></li>
+											</ul>
+										</div>
+									</li>
 								</ul>
 							</li>
 							<li>2 этап <span class="hm-arrows"></span></li>

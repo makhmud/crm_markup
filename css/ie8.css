@@ -81,3 +81,10 @@ span.add{
 #steps-menu > li:after{
 	background-image: url(../img/ie8/head-menu-corners.png);
 }
+
+.popover.green:before{
+	background-image: url(../img/ie8/green-popover-corner.png);
+}
+
+.edit-input-icon{
+	background-image: url(../img/ie8/pen.png);

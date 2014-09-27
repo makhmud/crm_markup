@@ -22,7 +22,7 @@ header{
 	position: relative;
 }
 #main-menu-button{
-	width: 76px;
+	width: 74px;
 	height: 38px;
 	background: url(../img/top-menu.png) center center no-repeat;
 	-webkit-background-size: 20px 12px;
@@ -33,7 +33,6 @@ header{
 	opacity: .2;
 }
 #main-content{
-	height: 100%;
 	font-size: 0;
 }
 #top-menu li a, #profile-menu a{
@@ -44,7 +43,7 @@ header{
 #top-menu li a{
 	text-decoration: none;
 	color: #fff;
-	padding: 0 12px;
+	padding: 0 11px;
 }
 #top-menu li:first-child a{
 	padding-left: 0;
@@ -57,8 +56,11 @@ header{
 }
 
 #profile-menu a{
-	padding: 5px 15px 0;
+	padding: 5px 11px 0 7px;
 	height: 33px;
+}
+#profile-menu li:first-child a{
+	padding-right: 21px;
 }
 #profile-menu a>span{
 	background-image: url(../img/profile-menu-icons.png);
@@ -112,8 +114,14 @@ span.count{
 	-webkit-background-size: 104px 78px;
 	background-size: 104px 78px;
 	display: inline-block;
+	margin-bottom: 5px;
 }
-
+#left-menu li:nth-child(3) span[class^="icon-"] {
+	margin: -6px 0 10px;
+}
+#left-menu li:nth-child(4) span[class^="icon-"] {
+	margin: -9px 0 14px;
+}
 #left-menu a:hover span.icon-order{
 	background-position: 0 0;
 }
@@ -144,7 +152,7 @@ span.count{
 	text-decoration: none;
 	color: #333;
 	display: inline-block;	
-	padding: 20px 0;
+	padding: 28px 0 24px;
 	border-bottom: 1px solid #e8e8e8;
 	width: 76px;
 }
@@ -167,6 +175,9 @@ span.count{
 	vertical-align: middle;
 	display: inline-block;
 }
+#top-panel span.filter{
+	margin-left: 4px;
+}
 #top-panel .order-item > *{
 	display: inline-block;
 	vertical-align: middle;
@@ -177,14 +188,14 @@ span.count{
 	color: #000;
 }
 #top-panel .order-item .info > *{
-	margin-right: 20px;
+	margin-right: 16px;
 }
 #top-panel-controls{
-	margin: 0 10px 0 14px;
+	margin: 0 7px 0 14px;
 	position: relative;
 }
 #search-order-form{
-	margin-right: 25px;
+	margin-right: 23px;
 }
 #search-order-form input{
 	padding: 5px 7px;
@@ -193,11 +204,13 @@ span.count{
 	border-radius: 2px;
 	font-size: 11px;
 	outline: none;
+	width: 143px;
+	margin: -4px 0 0;
 }
 
 #right-top-menu{
 	height: 50px;
-	line-height: 50px;
+	line-height: 45px;
 }
 #right-top-menu a{
 	display: inline-block;
@@ -208,7 +221,7 @@ span.count{
 	vertical-align: middle;
 }
 #right-top-menu [class^="type-20"]{
-	margin-right: 6px;
+	margin-right: 9px;
 }
 
 
@@ -231,7 +244,7 @@ span.count{
 #order-list li a{
 	display: block;
 	border-left: 7px solid #00ba55;
-	padding: 20px 10px;
+	padding: 16px 8px 14px;
 	color: #333;
 	text-decoration: none;
 }
@@ -297,7 +310,7 @@ span.count{
 	text-align: center;
 }
 #orders-table .amount{
-	padding: 10px;
+	padding-left: 18px;
 }
 #orders-table .controls{
 	display: inline-block;
@@ -305,12 +318,18 @@ span.count{
 #orders-table .amount .controls{
 	width: 8px;
 	vertical-align: middle;
-	margin-left: 28px;
+	margin: -10px 0 0 24px;
 	line-height: 24px;
+}
+#orders-table .price{
+	padding: 0 15px 0 6px;
+}
+#orders-table .price .controls{
+	float: right;
 }
 
 #orders-table .item-info{
-	padding: 15px;
+	padding: 11px 20px 11px;
 }
 .item-info .info{
 	width: 330px;
@@ -325,7 +344,7 @@ span.count{
 	height: 40px;
 	line-height: 40px;
 	text-align: center;
-	margin-right: 16px;
+	margin-right: 11px;
 }
 .item-info .image img{
 	height: auto;
@@ -341,20 +360,20 @@ span.count{
 }
 
 .contact-info{
-	margin: 30px 0 20px;
+	margin: 26px 0 14px;
 }
 .contact-info > *, .contact-info > .additional > *{
 	display: inline-block;
 	vertical-align: top;
 }
 .contact-info > .additional > *{
-	margin-right: 20px;
+	margin: 1px 54px 0 28px;
 }
 .contact-info > .user > *, .contact-info > .additional > * > *{
 	margin: 5px 0;
 }
 .contact-info .user{
-	margin-left: 20px;
+	margin-left: 24px;
 }
 .contact-info .user > *{
 	padding-left: 30px;
@@ -362,6 +381,7 @@ span.count{
 	background: url(../img/contact-info.png) no-repeat;
 	-webkit-background-size: 16px 48px;
 	background-size: 16px 48px;
+	margin: 6px 0 9px;
 }
 .contact-info .user .name{
 	background-position: 0 0;
@@ -422,6 +442,9 @@ tbody .datepick-selected:last-child{
 	position: relative;
 	margin-left: 24px;
 }
+#order-summary .summary{
+	margin-right: 39px;
+}
 #add-more{
 	color: #00ba55;
 }
@@ -431,22 +454,43 @@ tbody .datepick-selected:last-child{
 #add-more + .popover{
 	display: none;
 	top: 30px;
+	left: -12px;
 }
 #add-more + .popover:before{
 	left: 10px;
 }
 #add-more-popover .popover-content{
-	padding: 12px;
+	padding: 7px 10px;
 }
 #more-goods{
 	width: 550px;
 	border-collapse: collapse;
-	margin: 10px 0 0;
+	margin: 4px 0 0;
+}
+#more-goods th{
+	padding: 10px 9px;
+}
+#more-goods td{
+	padding: 0 9px;
 }
 #more-goods td, #more-goods th{
 	text-align: center;
 	border: 1px solid #f2f2f2;
-	padding: 10px 7px;
+}
+#more-goods tr td:nth-child(1){
+	width: 9% ;
+}
+#more-goods tr td:nth-child(2){
+	width: 11%;
+}
+#more-goods tr td:nth-child(3){
+	width: 38%;
+}
+#more-goods tr td:nth-child(4){
+	width: 16%;
+}
+#more-goods tr td:nth-child(5){
+	width: 13%;
 }
 #more-goods tr td:nth-child(3), #more-goods tr th:nth-child(3){
 	text-align: left;
@@ -466,24 +510,25 @@ tbody .datepick-selected:last-child{
 	background-color: #00ba55;
 	border-radius: 2px;
 	box-shadow: 0 1px 0 0 rgba(0,0,0,.23) inset;
-	padding: 3px 8px;
+	padding: 3px 11px;
 }
 .sort a{
-	margin-right: 10px;
+	margin-right: 9px;
 }
 .sort input{
 	border: 1px solid #f2f2f2;
 	border-radius: 2px;
-	padding: 7px;
+	padding: 5px 7px;
 	vertical-align: middle;
 	font-size: 11px;
 	width: 208px;
+	margin-left: 22px;
 }
 
 #order-summary{
 	display: inline-block;
 	width: 100%;
-	margin: 20px 0;
+	margin: 24px 0 20px;
 }
 
 #order-total{
@@ -614,6 +659,11 @@ tbody .datepick-selected:last-child{
 	position: relative;
 	top: 8px;
 	left: 11px;
+	opacity: .2;
+	transition:opacity 100ms linear;
+}
+#steps-menu > li .warning:hover{
+	opacity: 1;
 }
 #steps-menu > li.active .hm-arrows{
 	background-position: 0 0;
@@ -625,8 +675,13 @@ tbody .datepick-selected:last-child{
 #steps-menu > li [class^="hm-"]{
 	float: right;
 }
-#steps-menu li ul{
+#steps-menu li > ul{
 	background-color: #00ba55;
+}
+#steps-menu > li > ul{
+	display: none;
+}
+#steps-menu li ul{
 	list-style: none;
 	text-align: left;
 	line-height: 26px;
@@ -637,7 +692,6 @@ tbody .datepick-selected:last-child{
 	position: absolute;
 	z-index: 5;
 	top: 14px;
-	display: none;
 }
 #steps-menu li ul li > *{
 	line-height: 1;
@@ -645,4 +699,40 @@ tbody .datepick-selected:last-child{
 #steps-menu li ul li{
 	border-bottom: 1px solid #00b352;
 	border-top: 1px solid #30c574;
+}
+#steps-menu li ul li .popover:before{
+	left: 15px;
+}
+#steps-menu li ul li .popover{
+	left: -7px;
+	top: 31px;
+	display: none;
+}
+#steps-menu li ul li .popover ul{
+	width: 174px;
+}
+#steps-menu li ul li .popover ul li{
+	border-top: none;
+	border-bottom-color: #0ea352;
+}
+#steps-menu li ul li .popover ul li:last-child{
+	border-bottom: none;
+	padding-bottom: 0;
+}
+#steps-menu li ul li .popover a{
+	color: #fff;
+	text-decoration: none;
+}
+#steps-menu li ul li .popover a:hover{
+	color: #37b671;
+}
+#steps-menu .warning .popover{
+	padding: 5px;
+	width: 150px;
+	display: none;
+	top: 26px;
+	left: -10px;
+}
+#steps-menu .warning:hover .popover{
+	display: inline-block;
 }
