@@ -69,3 +69,15 @@ span.add{
 [class^="pagination-control-"]{
 	background-image: url(../img/ie8/paging-controls.png);
 }
+
+.warning{
+	background-image: url(../img/ie8/warning.png);
+}
+
+[class^="hm-arrows"]{
+	background-image: url(../img/ie8/head-menu-arrows.png);
+}
+
+#steps-menu > li:after{
+	background-image: url(../img/ie8/head-menu-corners.png);
+}

@@ -78,7 +78,12 @@ $(document).on('click', '#filter-button', function() {
 	$('#filter-button').toggleClass('active');
 	$('#filter-popover').fadeToggle();
 });
+
 $(document).on('click', '#add-more', function(e) {
 	e.preventDefault();
 	$('#add-more-popover').fadeToggle();
 });
+
+$(document).on('click', '#steps-menu li', function() {
+	$(this).find('ul').fadeToggle();
+})

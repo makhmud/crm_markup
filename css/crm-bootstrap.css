@@ -38,7 +38,7 @@ ul.inline-menu{
 	padding: 0;
 	list-style: none;
 }
-ul.inline-menu li{
+ul.inline-menu > li{
 	display: inline-block;
 	vertical-align: top;
 }
@@ -199,14 +199,19 @@ span.add{
 	background-position: 0 -8px;
 }
 
-.button.blue{
-	background-color: #3498db;
+.button{
 	padding: 4px 11px;
 	color: #fff;
 	display: inline-block;
 	text-decoration: none;
 	border-radius: 2px;
 	border: none;
+}
+.button.blue{
+	background-color: #3498db;	
+}
+.button.green{	
+	background-color: #009544;
 }
 
 .calendar-icon{
@@ -309,6 +314,15 @@ span.add{
 	display: inline-block;
 }
 
+.warning{
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	background-image: url(../img/warning.png);
+	-webkit-background-size: 15px 15px;
+	background-size: 15px 15px;
+}
+
 [class^="pan-"]{
 	border-left-width: 6px;
 	border-left-style: solid;
@@ -321,6 +335,20 @@ span.add{
 }
 .pan-green{
 	border-left-color: #00ba55;
+}
+
+[class^="hm-arrows"]{
+	display: inline-block;
+	vertical-align: middle;
+	width: 7px;
+	height: 5px;
+	background-image: url(../img/head-menu-arrows.png);
+	-webkit-background-size: 7px 10px;
+	background-size: 7px 10px;
+	background-position: 0 -5px;
+}
+.hm-arrows-active{
+	background-position: 0 0;
 }
 
 .company-icon{

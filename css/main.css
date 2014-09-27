@@ -555,3 +555,94 @@ tbody .datepick-selected:last-child{
 #delivery-table tr td:nth-child(1){
 	padding: 0;
 }
+
+#steps-menu{
+	font-size: 0;
+	border-bottom: 1px solid #f2f2f2;
+}
+#steps-menu > li{
+	font-size: 12px;
+	width: 25%;
+	text-align: center;
+	line-height: 31px;
+	position: relative;
+	height: 31px;
+	color: #afafaf;
+	cursor: pointer;
+}
+#steps-menu > li *{
+	position: relative;
+	z-index: 6;
+}
+#steps-menu > li:nth-child(1){
+	z-index: 4;
+}
+#steps-menu > li:nth-child(2){
+	z-index: 3;
+}
+#steps-menu > li:nth-child(3){
+	z-index: 2;
+}
+#steps-menu > li:nth-child(4){
+	z-index: 1;
+}
+#steps-menu > li:nth-child(4):after{
+	display: none;
+}
+#steps-menu > li:after{
+	display: inline-block;
+	content: '';
+	width: 9px;
+	height: 31px;
+	background-image: url(../img/head-menu-corners.png);
+	-webkit-background-size: 18px 31px;
+	background-size: 18px 31px;
+	background-position: -9px 0;
+	position: absolute;
+	top: 0;
+	right: -9px;
+}
+#steps-menu > li.active{
+	background-color: #00ba55;
+	color: #fff;
+}
+#steps-menu > li .hm-arrows{
+	top: 13px;
+	position: relative;
+}
+#steps-menu > li .warning{
+	position: relative;
+	top: 8px;
+	left: 11px;
+}
+#steps-menu > li.active .hm-arrows{
+	background-position: 0 0;
+}
+
+#steps-menu > li.active:after{
+	background-position: 0 0;
+}
+#steps-menu > li [class^="hm-"]{
+	float: right;
+}
+#steps-menu li ul{
+	background-color: #00ba55;
+	list-style: none;
+	text-align: left;
+	line-height: 26px;
+	margin: 0;
+	padding: 14px 7px;
+	font-size: 11px;
+	width: 230px;
+	position: absolute;
+	z-index: 5;
+	top: 14px;
+	display: none;
+}
+#steps-menu li ul li > *{
+	line-height: 1;
+}
+#steps-menu li ul li{
+	border-bottom: 1px solid #00b352;
+	border-top: 1px solid #30c574;
+}
