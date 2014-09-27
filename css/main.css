@@ -543,3 +543,15 @@ tbody .datepick-selected:last-child{
 #grade-table img{
 	vertical-align: middle;
 }
+
+#delivery-table{
+	width: 100%;
+	min-width: 1095px;
+	margin: 10px;
+}
+#delivery-table tr>*, #delivery-table tr td:nth-child(1) time{
+	padding: 8px;
+}
+#delivery-table tr td:nth-child(1){
+	padding: 0;
+}

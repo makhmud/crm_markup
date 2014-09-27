@@ -61,3 +61,11 @@ span.add{
 [class^=grade-control]{
 	background-image: url(../img/ie8/grade-controls.png);
 }
+
+[class^="delivery-icon"]{
+	background-image: url(../img/ie8/delivery.png);
+}
+
+[class^="pagination-control-"]{
+	background-image: url(../img/ie8/paging-controls.png);
+}

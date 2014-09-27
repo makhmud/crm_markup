@@ -7,6 +7,13 @@ input, textarea{
 	font-family: 'Tahoma';
 }
 
+table{
+	border-collapse: collapse;
+}
+table tr>*{
+	border: 1px solid #f2f2f2;
+}
+
 .inline-block{
 	display: inline-block;
 }
@@ -254,6 +261,72 @@ span.add{
 	background-position: 0 -68px;
 }
 
+[class^="delivery-icon"]{
+	background-image: url(../img/delivery.png);
+	-webkit-background-size: 14px 28px;
+	background-size: 14px 28px;
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.delivery-icon-2{
+	background-position: 0 -14px;
+}
+
+.text-blue{
+	color: #6a8dc0;
+}
+.text-red{
+	color: #ea6c6c;
+}
+.text-green{
+	color: #00ba55;
+}
+
+[class^="pagination-control-"]{
+	display: inline-block;
+	width: 18px;
+	height: 9px;
+	background-image: url(../img/paging-controls.png);
+	-webkit-background-size: 36px 18px;
+	background-size: 36px 18px;
+}
+.pagination-control-prev-active{
+	background-position: 0 0;
+}
+.pagination-control-prev{
+	background-position: 0 -9px;
+}
+.pagination-control-next-active{
+	background-position: -18px 0;
+}
+.pagination-control-next{
+	background-position: -18px -9px;
+}
+
+.pagination > *{
+	display: inline-block;
+}
+
+[class^="pan-"]{
+	border-left-width: 6px;
+	border-left-style: solid;
+}
+.pan-red{
+	border-left-color: #ea6c6c;
+}
+.pan-blue{
+	border-left-color: #6a8dc0;
+}
+.pan-green{
+	border-left-color: #00ba55;
+}
+
+.company-icon{
+	vertical-align: middle;
+}
+
 .summary .title{
 	text-align: right;
 	color: #bfbfbf;
@@ -345,4 +418,21 @@ form.standart .checkbox label{
 }
 .input-date-single{
 	width: 100px !important;
+}
+
+[class^="payment-icon-"]{
+	width: 18px;
+	height: 18px;
+	-webkit-background-size: 18px 18px;
+	background-size: 18px 18px;
+	display: inline-block;
+}
+.payment-icon-webmoney{
+	background-image: url(../img/payments/webmoney.png);
+}
+.payment-icon-credit{
+	background-image: url(../img/payments/creditcard.png);
+}
+.payment-icon-qiwi{
+	background-image: url(../img/payments/qiwi.png);
 }
