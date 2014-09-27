@@ -207,7 +207,7 @@ span.count{
 	width: 143px;
 	margin: -4px 0 0;
 }
-body.delivery #search-order-form input{
+body.delivery #search-order-form input, body.grade #search-order-form input{
 	width: 224px;
 }
 
@@ -590,19 +590,52 @@ tbody .datepick-selected:last-child{
 
 #grade-table{
 	border-collapse: collapse;
-	width: 100%;
+	width: 99%;
+	margin: 10px;
 }
 #grade-table tr > *{
 	border: 1px solid #f2f2f2;
 	text-align: center;
-	padding: 10px 0;
+	padding: 5px 0;
 }
-#grade-table tr:hover td{
+#grade-table .separate-cell-top{
+	padding-bottom: 5px;
+	border-bottom: 1px solid #f2f2f2;
+}
+#grade-table .separate-cell-bottom{
+	padding-top: 5px;
+}
+#grade-table tr:hover td, #grade-table tr:hover [class^="separate-cell-"]{
 	background-color: #f9f9f9;
 	border-color: #f9f9f9;
 }
+#grade-table th:nth-child(1){
+	width: 3%;
+}
+#grade-table th:nth-child(2){
+	width: 11%;
+}
+#grade-table th:nth-child(3){
+	width: 12%;
+}
+#grade-table th:nth-child(4){
+	width: 10%;
+}
+#grade-table th:nth-child(5){
+	width: 11%;
+}
+#grade-table th:nth-child(6){
+	width: 24%;
+}
+#grade-table th:nth-child(7){
+	width: 17%;
+}
 #grade-table img{
 	vertical-align: middle;
+}
+
+#right-top-menu [class^="grade-control-"]{
+	margin-right: 7px;
 }
 
 #delivery-table{
@@ -824,4 +857,8 @@ tbody .datepick-selected:last-child{
 #right-top-menu .text{
 	margin-top: 2px;
 	display: inline-block;
+}
+
+body.grade .summary{
+	padding: 8px 0px 0 10px;
 }
