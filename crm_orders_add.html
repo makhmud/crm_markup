@@ -6,9 +6,9 @@
 	<title>crm_orders_all</title>
 
 	<link rel="stylesheet" href="css/jquery.jscrollpane.css">
-	<link rel="stylesheet" href="css/crm-bootstrap.css">
 	<link rel="stylesheet" href="css/jquery.datepick.css">
 	<link rel="stylesheet" href="css/jquery.formstyler.css">
+	<link rel="stylesheet" href="css/crm-bootstrap.css">
 	<link rel="stylesheet" href="css/main.css">
 
 	<script src="js/lib/jquery-1.11.1.min.js"></script>
@@ -106,17 +106,13 @@
 				</div>
 				<div class="order-item">
 					<div class="info">
-						<div class="number inline-block">№ Ю3123</div>
-						<time datetime="2014-01-27 20:53:20">27.01.2014, 20:53:20</time>
-					</div>
-					<div class="additional">
-						<span class="important active type-22"></span>
-						<span class="vip active type-22"></span>
+						<div class="number inline-block">№ ---</div>
+						<time datetime="2014-01-27 20:53:20">27.01.2014, --:--:--</time>
 					</div>
 				</div>
 				<div id="right-top-menu" class="fr">
-					<a href="#"><span class="type-20-print"></span><span class="ul-dotted">Печать</span></a>
-					<a href="#"><span class="type-20-join"></span>Объединить</a>
+					<span class="important active type-22"></span>
+					<span class="vip active type-22"></span>
 				</div>
 			</section>
 
@@ -361,12 +357,12 @@
 											</div>
 										</div>
 									</div>
-									<div class="form-item inline">
+									<div class="form-item inline delivery-date">
 										<label for="delivery_date">Дата доставки:</label>
 										<input type="text" name="delivery_date" class="input-date-single" id="delivery_time" placeholder="__.__.____">
 										<span class="calendar-icon"></span>
 									</div>
-									<div class="form-item inline">
+									<div class="form-item inline delivery-time">
 										<label for="delivery_time">Время :</label>
 										<select name="delivery_time" id="delivery_time">
 											<option value="1">10:00-15:00</option>

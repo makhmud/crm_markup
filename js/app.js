@@ -25,6 +25,9 @@ window.onload = function() {
 
 $(document).ready( function() {
 
+	// widthAdapt();
+	// heightAdapt();
+
 	if (typeof( $().styler ) != 'undefined'){
 		$('select, input').styler();
 	}

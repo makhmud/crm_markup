@@ -243,8 +243,8 @@ span.count{
 }
 #order-list li a{
 	display: block;
-	border-left: 7px solid #00ba55;
-	padding: 16px 8px 14px;
+	border-left: 6px solid #00ba55;
+	padding: 17px 8px 14px;
 	color: #333;
 	text-decoration: none;
 }
@@ -533,25 +533,38 @@ tbody .datepick-selected:last-child{
 
 #order-total{
 	background-color: #f8f8f8;
-	padding: 20px 0;
+	padding: 18px 0;
+}
+#order-total .summary a.ul-dotted{
+	margin-left: 12px;
+}
+#order-total .summary .calendar-icon{
+	margin: -4px 0 0 16px;
 }
 #order-total .summary .title{
-	width: 120px;
+	width: 139px;
 }
 
 #order-bottom{
 	color: #afafaf;
-	margin: 25px 0;
+	margin: 18px 0;
 }
 #order-bottom .type{
-	margin: 0 25px;
+	margin: 0 24px;
 }
 
 #order-form{
-	margin: 0 25px;
+	margin: 0 23px;
 }
 #order-form label[for="delivery_time"]{
-	width: 60px;
+	width: 55px;
+}
+#order-form #delivery_time-styler .select .text{
+	width: 93px;
+}
+#order-form input[type="submit"]{
+	margin-left: 147px;
+	padding: 5px 8px;
 }
 
 .no-items{
@@ -735,4 +748,18 @@ tbody .datepick-selected:last-child{
 }
 #steps-menu .warning:hover .popover{
 	display: inline-block;
+}
+
+#delivery-type-styler .text{
+	width: 153px;
+}
+
+#right-top-menu .type-22{
+	vertical-align: middle;
+	margin: 0 0 0 4px;
+
+}
+
+#right-top-menu .vip.type-22{
+	margin-right: 37px;
 }

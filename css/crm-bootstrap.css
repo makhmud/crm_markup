@@ -379,23 +379,26 @@ span.add{
 .summary .title{
 	text-align: right;
 	color: #bfbfbf;
-	margin-right: 10px;
+	margin-right: 15px;
 }
 .summary .title, .summary.value{
 	width: 200px;
 	display: inline-block;
 }
 .summary .line{
-	margin-bottom: 10px;
+	margin-bottom: 11px;
 }
 
 form.standart .form-group{
 	border-bottom: 1px solid #f8f8f8;
 	padding-bottom: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 16px;
 }
-form.standart .form-item, form.standart .form-item .line{
+form.standart .form-item{
 	margin-bottom: 10px;
+}
+form.standart .form-item .line{
+	margin-bottom: 11px;
 }
 
 form.standart .form-item .line:last-child{
@@ -404,18 +407,30 @@ form.standart .form-item .line:last-child{
 form.standart .form-item.inline{
 	display: inline-block;
 	vertical-align: middle;
+	margin-top: 6px;
 }
 form.standart label{
 	font-weight: bold;
-	width: 147px;
+	width: 143px;
 	display: inline-block;
 	vertical-align: middle;
+	line-height: 23px;
 }
 form.standart input[type="text"], form.standart input[type="email"], form.standart input[type="number"], form.standart textarea, .select .text{
 	width: 153px;
 	padding: 4px 7px;
 	border-radius: 3px;
 	border: 1px solid #ddd;
+	margin: 0;
+	height: 14px;
+}
+.select .text{
+	width: 142px;
+	height: 16px;
+	padding: 3px 7px 2px;
+}
+.jq-selectbox{
+	vertical-align: top;
 }
 form.standart input.error{
 	border-color: #ea6c6c;
@@ -424,8 +439,17 @@ form.standart input[type="text"], form.standart input[type="email"], form.standa
 	margin-right: 16px;
 	outline: none;
 }
+
+.jq-checkbox{
+	margin-right: 4px;
+}
+
+form.standart .field-group input[type="text"], form.standart .field-group input[type="email"], form.standart .field-group input[type="number"], .field-group  .jqselect{
+	margin-right: 10px;
+}
 form.standart textarea{
-	width: 346px;
+	width: 331px;
+	height: 92px;
 }
 form.standart .select + .dropdown ul{
 	width: 169px;
@@ -434,10 +458,11 @@ form.standart .select + .dropdown ul{
 	border-radius: 0 0 3px 3px;
 }
 form.standart input.small{
-	width: 27px;
+	width: 32px;
+	margin-right: 8px !important;
 }
 form.standart select.small+.jqselect .select .text{
-	width: 27px;
+	width: 30px;
 	height: 17px;
 }
 form.standart select.small+.jqselect .dropdown ul{
@@ -449,8 +474,11 @@ form.standart select.long+.jqselect .select .text{
 form.standart select.long+.jqselect .dropdown ul{
 	width: 354px;
 }
+form.standart .delivery-date{
+	margin-right: 55px;
+}
 form.standart input.large{
-	width: 277px;
+	width: 271px;
 }
 form.standart .form-item.textarea label{
 	vertical-align: top;
@@ -466,7 +494,8 @@ form.standart .checkbox label{
 	width: auto;
 }
 .input-date-single{
-	width: 100px !important;
+	width: 84px !important;
+	margin-right: 10px !important;
 }
 
 [class^="payment-icon-"]{
