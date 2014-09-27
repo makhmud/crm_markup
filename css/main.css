@@ -870,3 +870,11 @@ body.grade .summary{
 #order-form-2{
 	margin: 20px 23px 0;
 }
+
+#order-bottom .change{
+	color: #019e49;
+	margin-right: 25px;
+}
+#order-bottom .change .pen-green{
+	margin-right: 7px;
+}

@@ -577,3 +577,12 @@ td.checked-wrap{
 	padding: 5px 10px;
 	color: #c2c2c2;
 }
+
+.pen-green{
+	background-image: url(../img/pen-green.png);
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	-webkit-background-size: 11px 11px;
+	background-size: 11px 11px;
+}
