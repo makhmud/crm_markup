@@ -68,6 +68,9 @@ $(document).ready( function() {
 		    prevText: '<', todayText: 'MM yyyy', nextText: '>',
 		    commandsAsDateFormat: true,
 		    pickerClass: 'popover gray',
+		    onShow: function (){
+		    	window.onresize();
+		    },
 		    // onShow: function (){
 		    // 	console.log($('.calendar-icon').offset());
 		    // 	$('.datepick-popup').css({
@@ -97,6 +100,9 @@ $(document).ready( function() {
 	        {picker: $.datepick.defaultRenderer.picker. 
 	            replace(/\{link:clear\}/, ''). 
 	            replace(/\{link:close\}/, '')}), 
+		    onShow: function (){
+		    	window.onresize();
+		    },
 		})
 }
 })
