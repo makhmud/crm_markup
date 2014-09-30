@@ -92,7 +92,7 @@ $(document).ready( function() {
 		});
 		$('.input-date-single').datepick({
 		    dateFormat: 'dd.mm.yyyy',
-		    showTrigger: '.input-date-single + .calendar-icon',
+            showTrigger: '.calendar-icon',
 		    prevText: '<', todayText: 'MM yyyy', nextText: '>',
 		    commandsAsDateFormat: true,
 		    pickerClass: 'popover gray',
@@ -135,4 +135,9 @@ $(document).on('click', '#steps-menu li .text', function() {
 $(document).on('click', '#order-cancel', function(e) {
 	e.preventDefault();
 	$(this).siblings('.popover').fadeToggle();
+});
+
+$(document).on('click', '.important, .vip', function(e){
+    e.preventDefault();
+    $(this).toggleClass('active');
 });

@@ -424,6 +424,10 @@ body.delivery #search-order-form input, body.grade #search-order-form input{
 	outline: none;
 }
 
+.datepick.popover{
+    margin-left: 113px;
+    margin-top: 10px;
+}
 .datepick.popover:before{
 	left: 15px;
 }
