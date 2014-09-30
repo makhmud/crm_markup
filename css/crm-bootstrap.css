@@ -160,13 +160,13 @@ span.add{
 .type8-plus{
 	background-position: -8px -8px;
 }
-.type8-plus.active{
+.type8-plus.active, a:hover > .type8-plus, a:active > .type8-plus{
 	background-position: -8px 0;
 }
 .type8-minus{
 	background-position: -16px -8px;
 }
-.type8-minus.active{
+.type8-minus.active, a:hover > .type8-minus, a:active > .type8-minus{
 	background-position: -16px 0;
 }
 

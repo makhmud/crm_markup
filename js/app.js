@@ -160,3 +160,16 @@ $(document).on('click', '.switch', function(e) {
 				.text('Да');
 	}
 });
+
+$(document).on('click', '.amount-control', function(e){
+    e.preventDefault();
+    var amountValueElem = $(this).closest('.amount').find('.value');
+    var amount = parseInt( amountValueElem.text() );
+
+    if ( $(this).hasClass('increase') ){
+    	amount++;
+    } else {
+    	amount--;
+    }
+    amountValueElem.text( amount >=0 ? amount : 0 );
+});
