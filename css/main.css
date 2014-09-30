@@ -903,3 +903,15 @@ body.grade .summary{
 	-webkit-background-size: 10px 10px;
 	background-size: 10px 10px;
 }
+
+.jq-selectbox .dropdown{
+	width: 100%;
+}
+.jq-selectbox .dropdown ul{
+	width: 100%;
+}
+.jq-selectbox li{
+	min-height: 16px;
+	padding-top: 3px;
+	padding-bottom: 2px;
+}
