@@ -97,3 +97,7 @@ span.add{
 .pen-green{
 	background-image: url(../img/ie8/pen-green.png);
 }
+
+.jq-checkbox.checked{
+	background-image: url(../img/ie8/checked.png);
+}

@@ -324,6 +324,11 @@ body.delivery #search-order-form input, body.grade #search-order-form input{
 	margin: -10px 0 0 24px;
 	line-height: 24px;
 }
+#orders-table .amount .controls [class^="type8"]{
+	background-repeat: no-repeat;
+	width: 18px;
+	height: 24px;
+}
 #orders-table .price{
 	padding: 0 15px 0 6px;
 }
@@ -881,4 +886,10 @@ body.grade .summary{
 }
 #order-bottom .change .pen-green{
 	margin-right: 7px;
+}
+
+.jq-checkbox.checked{
+	background: url(../img/checked.png) center center no-repeat #fff;
+	-webkit-background-size: 10px 10px;
+	background-size: 10px 10px;
 }

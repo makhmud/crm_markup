@@ -31,6 +31,7 @@ $(document).ready( function() {
 	if (typeof( $().styler ) != 'undefined'){
 		$('select, input').styler();
 	}
+	$('input[type="checkbox"]:checked').closest('td').addClass('checked-wrap');
 
 	$(document).on('keyup', '#street', function() {
 
@@ -140,4 +141,22 @@ $(document).on('click', '#order-cancel', function(e) {
 $(document).on('click', '.important, .vip', function(e){
     e.preventDefault();
     $(this).toggleClass('active');
+});
+
+$(document).on('change', 'input[type="checkbox"]', function(e){
+	$(this).closest('td').toggleClass('checked-wrap');
+});
+
+$(document).on('click', '.switch', function(e) {
+	e.preventDefault();
+	var $this = $(this);
+	if( $this.hasClass('on') ){
+		$this.removeClass('on')
+				.addClass('off')
+				.text('Нет');
+	} else {
+		$this.removeClass('off')
+				.addClass('on')
+				.text('Да');
+	}
 });

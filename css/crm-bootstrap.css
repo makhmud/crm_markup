@@ -130,6 +130,7 @@ span.add{
 	font-size: 11px;
 	color: #fff;
 	text-align: left;
+	cursor: pointer;
 }
 .switch.on{
 	background-position: 0 0;
@@ -188,7 +189,7 @@ span.add{
 	z-index: 1000;
 	line-height: 1;
 	color: #333;
-	font-size: 11px;
+	font-size: 12px;
 }
 .popover ul{
 	position: relative !important;
@@ -563,7 +564,7 @@ form.standart .checkbox label{
 }
 
 td.checked-wrap{
-	background-color: #0099de;
+	background-color: #0099de !important;
 }
 
 .search-results{
