@@ -111,6 +111,13 @@ span.add{
 	-webkit-background-size: 20px 40px;
 	background-size: 20px 40px;
 }
+.type-20-print.active{
+	background-image: url(../img/print-active.png);
+	-webkit-background-size: 16px 16px;
+	background-size: 16px 16px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
 .type-20-join{
 	background-position: 0 -20px;
 }
@@ -589,4 +596,35 @@ td.checked-wrap{
 	height: 11px;
 	-webkit-background-size: 11px 11px;
 	background-size: 11px 11px;
+}
+
+.popover-menu{
+	display: none;
+}
+.popover-menu ul{
+	margin: 0;
+	padding: 5px;
+	list-style: none;
+	max-width: 155px;
+}
+.popover-menu ul li{
+	padding: 5px 0;
+	border-bottom: 1px solid #e8e8e8;
+}
+.popover-menu ul li:first-child{
+	padding-top: 0;
+}
+.popover-menu ul li:last-child{
+	padding-bottom: 0;
+	border-bottom: none;
+}
+.popover-menu:before{
+	left:10px;
+}
+.popover-menu a{
+	text-decoration: none;
+}
+
+.popover-menu-trigger{
+	position: relative;
 }

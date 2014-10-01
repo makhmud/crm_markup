@@ -34,6 +34,7 @@ header{
 }
 #main-content{
 	font-size: 0;
+	overflow: hidden;
 }
 #top-menu li a, #profile-menu a{
 	height: 38px;
@@ -214,6 +215,7 @@ body.delivery #search-order-form input, body.grade #search-order-form input{
 #right-top-menu{
 	height: 50px;
 	line-height: 45px;
+	position: relative;
 }
 #right-top-menu a{
 	display: inline-block;
@@ -385,6 +387,16 @@ body.delivery #search-order-form input, body.grade #search-order-form input{
 }
 .contact-info > .additional > *{
 	margin: 1px 54px 0 28px;
+}
+.contact-info > .additional .payment{
+	position: relative;
+}
+.contact-info > .additional .payment .popover-menu{
+	width: 150px;
+	top: 50px;
+}
+.contact-info > .additional .payment .popover-menu a:hover{
+	color: #333;
 }
 .contact-info > .user > *, .contact-info > .additional > * > *{
 	margin: 5px 0;
@@ -847,7 +859,7 @@ form[id^="order-form"] input[type="submit"]{
 }
 #steps-menu .warning .popover{
 	padding: 5px;
-	width: 150px;
+	width: 180px;
 	display: none;
 	top: 26px;
 	left: -10px;
@@ -936,4 +948,9 @@ body.grade .summary{
 
 #final-content{
 	outline:none;
+}
+
+#right-top-menu .popover-menu{
+	left: 0;
+	top: 40px;
 }

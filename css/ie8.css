@@ -105,3 +105,7 @@ span.add{
 .add-plus-12.white{
 	background-image: url(../img/ie8/add-plus-white.png);
 }
+
+.type-20-print.active{
+	background-image: url(../img/ie8/print-active.png);
+}

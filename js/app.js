@@ -27,13 +27,14 @@ var totalAdapt = function() {
 		mouseWheelSpeed: 20,
 		contentWidth: '0px'
 	});
-	$('.scrollpane').jScrollPane({
-		mouseWheelSpeed: 20
-	});
 }
 
 window.onload = function() {
 	totalAdapt();
+	$('.scrollpane').jScrollPane({
+		mouseWheelSpeed: 20,
+		autoReinitialise: true
+	});
 }
 
 $(document).ready( function() {
@@ -159,6 +160,12 @@ $(document).on('click', '#order-cancel', function(e) {
 $(document).on('click', '.important, .vip', function(e){
     e.preventDefault();
     $(this).toggleClass('active');
+});
+
+$(document).on('click', '.popover-menu-trigger', function(e){
+    e.preventDefault();
+    $(this).find('[class^="type-20"]').toggleClass('active');
+    $(this).siblings('.popover-menu').toggle();
 });
 
 $(document).on('change', 'input[type="checkbox"]', function(e){
