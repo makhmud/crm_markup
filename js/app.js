@@ -5,7 +5,7 @@ var widthAdapt = function() {
 	if ( finalContentOffset>=maxWidth) {
 		finalContentOffset = maxWidth;
 	}
-	$('#final-content').width(finalContentOffset);
+	$('#final-content, #final-content .jspContainer').width(finalContentOffset);
 }
 
 var heightAdapt = function() {
@@ -14,13 +14,21 @@ var heightAdapt = function() {
 	var contentHeight = $('#inner-content').outerHeight() + topPanelHeight;
 	var neededHeight = (pageHeight>contentHeight) ? pageHeight : contentHeight;
 	console.log( pageHeight, topPanelHeight, contentHeight, neededHeight, $('#inner-content').outerHeight() );
-	$('#left-sidebar').height( neededHeight );
-	$('#inner-content').height( neededHeight - topPanelHeight );
+	$('#left-sidebar').height( pageHeight );
+	$('#inner-content').height( pageHeight - topPanelHeight );
+	$('#final-content').css({height: (pageHeight - topPanelHeight) + 'px' });
+}
+
+var totalAdapt = function() {
+	widthAdapt();
+	heightAdapt();
+	$('#final-content').jScrollPane({
+		mouseWheelSpeed: 20,
+	});
 }
 
 window.onload = function() {
-	widthAdapt();
-	heightAdapt();
+	totalAdapt();
 }
 
 $(document).ready( function() {
@@ -109,8 +117,7 @@ $(document).ready( function() {
 })
 
 window.onresize = function () {
-	widthAdapt();
-	heightAdapt();
+	totalAdapt();
 }
 
 $(document).on('click', '#main-menu-button', function(e) {
