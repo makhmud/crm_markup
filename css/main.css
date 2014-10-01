@@ -471,11 +471,12 @@ tbody .datepick-selected:last-child{
 	color: #00ba55;
 }
 #add-more span{
-	margin-right: 10px;
+	margin-right: 4px;
+	display: inline-block;
 }
 #add-more + .popover{
 	display: none;
-	top: 30px;
+	top: 35px;
 	left: -12px;
 }
 #add-more + .popover:before{
@@ -914,4 +915,22 @@ body.grade .summary{
 	min-height: 16px;
 	padding-top: 3px;
 	padding-bottom: 2px;
+}
+
+#add-more{
+	height: 26px;
+	line-height: 26px;
+	text-decoration: none;
+	display: inline-block;
+	padding: 0 7px;
+	margin-left: -12px;
+}
+#add-more.active{
+	color: #fff;
+	background-color: #00ba55;
+	border-radius: 2px;
+}
+#add-more.active .add-icon{
+	margin-top: 1px;
+	margin-left: -1px;
 }

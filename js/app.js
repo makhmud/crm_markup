@@ -126,6 +126,16 @@ $(document).on('click', '#filter-button', function() {
 
 $(document).on('click', '#add-more', function(e) {
 	e.preventDefault();
+	var $this = $(this);
+	$this.toggleClass('active');
+	if( $this.hasClass('active') ){
+		$this.find('.text').removeClass('ul-dotted');
+		$this.find('.add-icon').removeClass('add-plus-10').addClass('add-plus-12').addClass('white');
+	} else {
+		$this.find('.text').addClass('ul-dotted');
+		$this.find('.add-icon').addClass('add-plus-10').removeClass('add-plus-12').removeClass('white');
+	}
+	
 	$('#add-more-popover').fadeToggle();
 });
 

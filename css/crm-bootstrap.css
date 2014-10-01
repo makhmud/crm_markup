@@ -255,7 +255,7 @@ span.add{
 	cursor: pointer;
 }
 
-[class^="add-plus-"]{
+[class*="add-plus-"]{
 	display: inline-block;
 	background-image: url(../img/add-plus.png);
 }
@@ -264,6 +264,9 @@ span.add{
 	background-size: 12px 12px;
 	width: 12px;
 	height: 12px;
+}
+.add-plus-12.white{
+	background-image: url(../img/add-plus-white.png);
 }
 .add-plus-10{
 	-webkit-background-size: 10px 10px;

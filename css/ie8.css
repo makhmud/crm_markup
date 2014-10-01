@@ -101,3 +101,7 @@ span.add{
 .jq-checkbox.checked{
 	background-image: url(../img/ie8/checked.png);
 }
+
+.add-plus-12.white{
+	background-image: url(../img/ie8/add-plus-white.png);
+}
