@@ -578,6 +578,15 @@ tbody .datepick-selected:last-child{
 #order-total .summary .title{
 	width: 139px;
 }
+#order-total .summary .value{
+	position: relative;
+}
+#order-total .summary .value .popover{
+	padding: 5px;
+	width: 250px;
+	top: 25px;
+	left: 80px;
+}
 
 #order-bottom{
 	color: #afafaf;
@@ -686,6 +695,12 @@ form[id^="order-form"] input[type="submit"]{
 #delivery-table tr td:nth-child(1) time{
 	display: block;
 	text-align: center;
+	padding: 0;
+	height: 31px;
+	line-height: 31px;
+}
+#delivery-table tr>*:nth-child(2) .text{
+	vertical-align: middle;
 }
 #delivery-table tr>*:nth-child(1){
 	width: 9%;

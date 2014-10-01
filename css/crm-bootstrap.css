@@ -313,7 +313,7 @@ span.add{
 	width: 14px;
 	height: 14px;
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: top;
 }
 .delivery-icon-2{
 	background-position: 0 -14px;
@@ -407,7 +407,7 @@ span.add{
 }
 
 .company-icon{
-	vertical-align: middle;
+	vertical-align: top;
 }
 
 .summary .title{
