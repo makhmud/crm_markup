@@ -17,6 +17,7 @@ var heightAdapt = function() {
 	$('#left-sidebar').height( pageHeight );
 	$('#inner-content').height( pageHeight - topPanelHeight );
 	$('#final-content').css({height: (pageHeight - topPanelHeight) + 'px' });
+	$('#order-list-wrapper ul').height( pageHeight - topPanelHeight - $('#aside-controls').outerHeight());
 }
 
 var totalAdapt = function() {
@@ -24,6 +25,10 @@ var totalAdapt = function() {
 	heightAdapt();
 	$('#final-content').jScrollPane({
 		mouseWheelSpeed: 20,
+		contentWidth: '0px'
+	});
+	$('.scrollpane').jScrollPane({
+		mouseWheelSpeed: 20
 	});
 }
 
@@ -64,10 +69,6 @@ $(document).ready( function() {
 	$(document).on('blur', '#street', function() {
 		$('.search-results').remove();
 	})
-
-	$('.scrollpane').jScrollPane({
-		mouseWheelSpeed: 20
-	});
 
 	if (typeof( $().datepick ) != 'undefined'){
 		$('#filter-range, .input-date-range').datepick({ 
