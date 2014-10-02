@@ -628,3 +628,23 @@ td.checked-wrap{
 .popover-menu-trigger{
 	position: relative;
 }
+
+.datepick table tr>*{
+	border: none;
+}
+.datepick table tr>*>*{
+	height: 22px;
+	line-height: 22px;
+	padding: 0;
+	width: 22px;
+	margin: 0 !important;
+}
+.datepick table {
+	font-size: 10px;
+}
+.datepick table td a{
+	color: #6a8dc0;
+}
+.datepick table th span{
+	color: #afafaf;
+}

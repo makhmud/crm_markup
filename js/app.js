@@ -79,27 +79,10 @@ $(document).ready( function() {
 		    prevText: '<', todayText: 'MM yyyy', nextText: '>',
 		    commandsAsDateFormat: true,
 		    pickerClass: 'popover gray',
-		    onShow: function (){
-		    	window.onresize();
-		    },
-		    // onShow: function (){
-		    // 	console.log($('.calendar-icon').offset());
-		    // 	$('.datepick-popup').css({
-		    // 		left: $('.calendar-icon').offset().left + 'px',
-		    // 		top: $('.calendar-icon').offset().top + 'px'
-		    // 	});
-		    // },
 		    renderer: $.extend({}, $.datepick.defaultRenderer, 
 	        {picker: $.datepick.defaultRenderer.picker. 
 	            replace(/\{link:clear\}/, ''). 
-	            replace(/\{link:close\}/, '')}), 
-		   //  onSelect: function (){
-		   //  	console.log($('.datepick-selected'));
-			  //   $('.datepick-selected').css({
-			  //   	'border-bottom-left-radius': '10px',
-					// 'border-top-left-radius': '10px'
-			  //   })
-		   //  }
+	            replace(/\{link:close\}/, '')})
 		});
 		$('.input-date-single').datepick({
 		    dateFormat: 'dd.mm.yyyy',
@@ -110,10 +93,7 @@ $(document).ready( function() {
 		    renderer: $.extend({}, $.datepick.defaultRenderer, 
 	        {picker: $.datepick.defaultRenderer.picker. 
 	            replace(/\{link:clear\}/, ''). 
-	            replace(/\{link:close\}/, '')}), 
-		    onShow: function (){
-		    	window.onresize();
-		    },
+	            replace(/\{link:close\}/, '')})
 		})
 }
 })
