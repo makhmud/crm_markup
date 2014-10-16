@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <title>crm_city</title>
+
+    <link rel="stylesheet" href="css/jquery.jscrollpane.css">
+    <link rel="stylesheet" href="css/jquery.datepick.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
+    <link rel="stylesheet" href="css/flags.css"/>
+    <link rel="stylesheet" href="css/modal.css"/>
+    <link rel="stylesheet" href="css/crm-bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/lib/jquery-1.11.1.min.js"></script>
+    <script src="js/lib/jquery.jscrollpane.min.js"></script>
+    <script src="js/lib/jquery.mousewheel.js"></script>
+    <script src="js/lib/jquery.datepick.js"></script>
+    <script src="js/lib/jquery.datepick-ru.js"></script>
+    <script src="js/lib/jquery.formstyler.min.js"></script>
+    <script src="js/lib/modal.js"></script>
+
+    <script src="js/app.js"></script>
+
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="css/ie8.css">
+    <script src="js/lib/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div id="page" class="container">
+<header>
+    <div class="inline-block vat"><a id="main-menu-button" class="inline-block active" href="#"></a></div>
+
+    <ul id="top-menu" class="inline-menu inline-block vat">
+        <li><a href="#">Товары</a></li>
+        <li><a href="#">Центр обработки</a></li>
+        <li><a href="#">Финансовый учёт</a></li>
+    </ul>
+
+    <ul id="profile-menu" class="inline-menu inline-block vat fr">
+        <li>
+            <a href="#">
+					<span class="icon-mail">
+						<span class="count">12</span>
+					</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon-settings"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon-user"></span>
+            </a>
+        </li>
+    </ul>
+</header>
+<section id="main-content">
+<aside id="left-sidebar">
+    <ul id="left-menu" class="inline-menu">
+        <li><a href="#" class="">
+            <span class="icon-city"></span>
+            <div class="text">Города</div>
+        </a></li>
+    </ul>
+</aside>
+<section id="main">
+
+<section id="top-panel">
+    <div id="top-panel-controls">
+        <span class="add type-22"></span>
+        <span class="filter type-22" id="filter-button"></span>
+        <div class="popover blue" id="filter-popover">
+            <div class="popover-content">
+                <div class="date">Дата:
+                    <input type="text" id="filter-range" value="--.--.---- - --.--.----">
+                    <span class="calendar-icon"></span>
+                </div>
+                <div class="status">Статус: <a href="#" class="ul-dotted">Выполнен</a></div>
+                <div class="only">Показать только:
+                    <span class="important active type-22 vam"></span>
+                    <span class="vip active type-22 vam"></span>
+                </div>
+                <div class="action">
+                    <a href="#" class="button blue">Ok</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="search-order-form">
+        <input type="text" id="search-box" placeholder="Номер заказа или телефона">
+    </div>
+    <div class="order-item">
+        <div class="info">
+            <div class="number inline-block">Абакан</div>
+            <div class="region">Республика Хакасия</div>
+        </div>
+    </div>
+    <div id="right-top-menu" class="fr">
+        <span class="bold">Код КЛАДР:</span> 1900000100000
+    </div>
+</section>
+
+<section id="inner-content">
+<aside id="order-list-wrapper" class="inline-block vat">
+    <ul class="inline-menu scrollpane" id="order-list">
+        <li class="order-item">
+            <a href="#">
+                <div class="info">
+                    <div class="number">Абакан</div>
+                    <div class="region"><span class="flag flag-ru"></span>Россия, Республика Хакасия</div>
+                </div>
+            </a>
+        </li>
+        <li class="order-item">
+            <a href="#">
+                <div class="info">
+                    <div class="number">Абакан</div>
+                    <div class="region"><span class="flag flag-ru"></span>Россия, Республика Хакасия</div>
+                </div>
+            </a>
+        </li>
+        <li class="order-item">
+            <a href="#">
+                <div class="info">
+                    <div class="number">Абакан</div>
+                    <div class="region"><span class="flag flag-ru"></span>Россия, Республика Хакасия</div>
+                </div>
+            </a>
+        </li>
+        <li class="order-item">
+            <a href="#">
+                <div class="info">
+                    <div class="number">Абакан</div>
+                    <div class="region"><span class="flag flag-ru"></span>Россия, Республика Хакасия</div>
+                </div>
+            </a>
+        </li>
+        <li class="order-item">
+            <a href="#">
+                <div class="info">
+                    <div class="number">Абакан</div>
+                    <div class="region"><span class="flag flag-ru"></span>Россия, Республика Хакасия</div>
+                </div>
+            </a>
+        </li>
+        <li class="order-item">
+            <a href="#">
+                <div class="info">
+                    <div class="number">Абакан</div>
+                    <div class="region"><span class="flag flag-ru"></span>Россия, Республика Хакасия</div>
+                </div>
+            </a>
+        </li>
+        <li class="order-item">
+            <a href="#">
+                <div class="info">
+                    <div class="number">Абакан</div>
+                    <div class="region"><span class="flag flag-ru"></span>Россия, Республика Хакасия</div>
+                </div>
+            </a>
+        </li>
+        <li class="order-item">
+            <a href="#">
+                <div class="info">
+                    <div class="number">Абакан</div>
+                    <div class="region"><span class="flag flag-ru"></span>Россия, Республика Хакасия</div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <div id="aside-controls">
+        <a href="#" class="repeat-button"></a>
+    </div>
+</aside>
+<section id="final-content"  class="inline-block vat">
+    <div id="courier-delivery" class="city-section">
+        <div class="title">Доставка курьером</div>
+        <div class="cs-item">
+            <div class="col">
+                <div class="line">
+                    <div class="label">Компания:</div>
+                    <div class="value"><img src="logo-1.png" class="company-icon" alt=""> СДЕК</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="line">
+                    <div class="label">Стоимость: </div>
+                    <div class="value">350 руб.</div>
+                </div>
+                <div class="line">
+                    <div class="label">Срок: </div>
+                    <div class="value">2-4 дня</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="reception-delivery" class="city-section">
+        <div class="title">Пункты выдачи</div>
+        <div class="cs-item">
+            <div class="col">
+                <div class="line">
+                    <div class="label">Компания:</div>
+                    <div class="value"><img src="logo-1.png" class="company-icon" alt=""> СДЕК</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="line">
+                    <div class="label">Стоимость: </div>
+                    <div class="value">350 руб.</div>
+                </div>
+                <div class="line">
+                    <div class="label">Срок: </div>
+                    <div class="value">2-4 дня</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="line">
+                    <div class="label">Срок хранения: </div>
+                    <div class="value">7 дней</div>
+                </div>
+                <div class="line">
+                    <div class="label">Способы оплаты: </div>
+                    <div class="value">наличные, карта</div>
+                </div>
+            </div>
+        </div>
+        <div class="cs-item">
+            <div class="col">
+                <div class="line">
+                    <div class="label">Компания:</div>
+                    <div class="value"><img src="logo-1.png" class="company-icon" alt=""> СДЕК</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="line">
+                    <div class="label">Стоимость: </div>
+                    <div class="value">350 руб.</div>
+                </div>
+                <div class="line">
+                    <div class="label">Срок: </div>
+                    <div class="value">2-4 дня</div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="line">
+                    <div class="label">Срок хранения: </div>
+                    <div class="value">7 дней</div>
+                </div>
+                <div class="line">
+                    <div class="label">Способы оплаты: </div>
+                    <div class="value">наличные, карта</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="city-section">
+        <table id="cs-table" cellpadding="0" cellspacing="0">
+            <thead>
+            <tr>
+                <th>Компания</th>
+                <th>Тип</th>
+                <th>Адрес</th>
+                <th>Режим работы</th>
+                <th>Описание</th>
+                <th>Координаты</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><img src="logo-1.png" class="company-icon" alt=""><span class="text">Axiomus</span></td>
+                <td><span class="cs-type-1"></span></td>
+                <td>ул. Арзамаса, д. 13, к. 2</td>
+                <td>пн-пт, 10:00-15:00</td>
+                <td><a class="ul-dotted" href="#">Показать</a></td>
+                <td>35.15476, 36.15475</td>
+                <td>
+                    <a href="#" class="cs-hamb"></a>
+                    <div class="popover popover-menu gray">
+                        <ul>
+                            <li><a href="#" class="modal-open" >Редактировать</a></li>
+                            <li><a href="#">Удалить</a></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="logo-1.png" class="company-icon" alt=""><span class="text">Axiomus</span></td>
+                <td><span class="cs-type-1"></span></td>
+                <td>ул. Арзамаса, д. 13, к. 2</td>
+                <td>пн-пт, 10:00-15:00</td>
+                <td><a class="ul-dotted" href="#">Показать</a></td>
+                <td>35.15476, 36.15475</td>
+                <td>
+                    <a href="#" class="cs-hamb"></a>
+                    <div class="popover popover-menu gray">
+                        <ul>
+                            <li><a class="modal-open" href="#">Редактировать</a></li>
+                            <li><a href="#">Удалить</a></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div><a class="ul-dotted green fr modal-open" href="#">Добавить адрес</a></div>
+    </div>
+</section>
+
+</section>
+</section>
+</section>
+</div>
+
+<div class="modal hide fade" id="modal" data-backdrop="static" >
+    <div class="modal-header">
+        <a href="#" type="button" class="close fr" data-dismiss="modal" aria-hidden="true">&times;</a>
+        <h3>Новый адрес</h3>
+    </div>
+    <div class="modal-body">
+        <form action="/" class="standart">
+            <div class="form-item">
+                <label for="delivery-type">Способ доставки:</label>
+                <select name="" id="delivery-type">
+                    <option value="1">Курьером</option>
+                    <option value="2">Почтой</option>
+                </select>
+            </div>
+            <div class="form-item">
+                <label for="delivery-type">Способ доставки:</label>
+                <select name="" id="delivery-type">
+                    <option value="1">Курьером</option>
+                    <option value="2">Почтой</option>
+                </select>
+            </div>
+
+            <div class="form-item"><label for="#">Режим
+                работы</label>
+            <table cellpadding="0" cellspacing="0" id="cs-address">
+            <tr>
+                <td><label for="monday">Пн</label><input type="checkbox" id="monday"/></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+            </tr>
+            <tr>
+                <td><label for="tue">Вт</label><input type="checkbox" id="tue"/></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+            </tr>
+            <tr>
+                <td><label for="wed">Вт</label><input type="checkbox" id="wed"/></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+            </tr>
+            <tr>
+                <td><label for="thu">Вт</label><input type="checkbox" id="thu"/></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+            </tr>
+            <tr>
+                <td><label for="fri">Вт</label><input type="checkbox" id="fri"/></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+            </tr>
+            <tr>
+                <td><label for="sat">Вт</label><input type="checkbox" id="sat"/></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+            </tr>
+            <tr>
+                <td><label for="sun">Вт</label><input type="checkbox" id="sun"/></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+                <td><a class="inc-day-time" href=""></a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><label for="temp1">00<span class="up">00</span> - 01<span class="up">00</span></label><input type="checkbox" id="temp1"></td>
+                <td><label for="temp2">01<span class="up">00</span> - 02<span class="up">00</span></label><input type="checkbox" id="temp2"></td>
+                <td><label for="temp3">02<span class="up">00</span> - 03<span class="up">00</span></label><input type="checkbox" id="temp3"></td>
+                <td><label for="temp4">03<span class="up">00</span> - 04<span class="up">00</span></label><input type="checkbox" id="temp4"></td>
+                <td><label for="temp5">04<span class="up">00</span> - 05<span class="up">00</span></label><input type="checkbox" id="temp5"></td>
+                <td><label for="temp6">05<span class="up">00</span> - 06<span class="up">00</span></label><input type="checkbox" id="temp6"></td>
+                <td><label for="temp7">06<span class="up">00</span> - 07<span class="up">00</span></label><input type="checkbox" id="temp7"></td>
+                <td><label for="temp8">07<span class="up">00</span> - 08<span class="up">00</span></label><input type="checkbox" id="temp8"></td>
+                <td><label for="temp9">08<span class="up">00</span> - 09<span class="up">00</span></label><input type="checkbox" id="temp9"></td>
+                <td><label for="temp10">09<span class="up">00</span> - 10<span class="up">00</span></label><input type="checkbox" id="temp10"></td>
+                <td><label for="temp11">10<span class="up">00</span> - 11<span class="up">00</span></label><input type="checkbox" id="temp11"></td>
+                <td><label for="temp12">11<span class="up">00</span> - 12<span class="up">00</span></label><input type="checkbox" id="temp12"></td>
+                <td><label for="temp13">12<span class="up">00</span> - 13<span class="up">00</span></label><input type="checkbox" id="temp13"></td>
+                <td><label for="temp14">13<span class="up">00</span> - 14<span class="up">00</span></label><input type="checkbox" id="temp14"></td>
+                <td><label for="temp15">14<span class="up">00</span> - 15<span class="up">00</span></label><input type="checkbox" id="temp15"></td>
+                <td><label for="temp16">15<span class="up">00</span> - 16<span class="up">00</span></label><input type="checkbox" id="temp16"></td>
+                <td><label for="temp17">16<span class="up">00</span> - 17<span class="up">00</span></label><input type="checkbox" id="temp17"></td>
+                <td><label for="temp18">17<span class="up">00</span> - 18<span class="up">00</span></label><input type="checkbox" id="temp18"></td>
+                <td><label for="temp19">18<span class="up">00</span> - 19<span class="up">00</span></label><input type="checkbox" id="temp19"></td>
+                <td><label for="temp20">19<span class="up">00</span> - 20<span class="up">00</span></label><input type="checkbox" id="temp20"></td>
+                <td><label for="temp21">20<span class="up">00</span> - 21<span class="up">00</span></label><input type="checkbox" id="temp21"></td>
+                <td><label for="temp22">21<span class="up">00</span> - 22<span class="up">00</span></label><input type="checkbox" id="temp22"></td>
+                <td><label for="temp23">22<span class="up">00</span> - 23<span class="up">00</span></label><input type="checkbox" id="temp23"></td>
+                <td><label for="temp24">23<span class="up">00</span> - 24<span class="up">00</span></label><input type="checkbox" id="temp24"></td>
+            </tr>
+            </table>
+            </div>
+
+            <div class="form-item">
+
+                <label for="">Адрес доставки:</label>
+                <div class="field-group">
+                    <div class="line">
+                        <select name="" id="" class="small">
+                            <option value="">ул.</option>
+                        </select>
+                        <input type="text" class="large">
+                        <div class="checkbox"><input type="checkbox"><label for="">не найдено</label></div>
+                    </div>
+                    <div class="line">
+                        <input class="small" type="text" placeholder="Дом">
+                        <input class="small" type="text" placeholder="Кор">
+                        <input class="small" type="text" placeholder="Стр">
+                        <input class="small" type="text" placeholder="Под">
+                        <input class="small" type="text" placeholder="Эт">
+                        <input class="small" type="text" placeholder="Кв">
+                        <input class="small" type="text" placeholder="Код">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-item textarea">
+                <label for="">Комментарий:</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="form-item">
+                <label for="">Телефон:</label>
+                <input type="text" class="error" name="phone[]">
+                <input type="text" name="phone[]">
+            </div>
+
+            <div class="form-item">
+                <input type="submit" value="Принять" class="button blue">
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+    </div>
+</div>
+
+</body>
+</html>

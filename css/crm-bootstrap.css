@@ -648,3 +648,24 @@ td.checked-wrap{
 .datepick table th span{
 	color: #afafaf;
 }
+
+[class^="cs-type-"]{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/cs-types.png);
+    background-size: 28px 14px;
+}
+.cs-type-2{
+    background-position: -14px 0;
+}
+.cs-hamb{
+    background-image: url(../img/cs-hamb.png);
+    background-size: 40px 12px;
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+}
+.cs-hamb.active{
+    background-position: -20px 0;
+}

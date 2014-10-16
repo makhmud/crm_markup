@@ -109,3 +109,11 @@ span.add{
 .type-20-print.active{
 	background-image: url(../img/ie8/print-active.png);
 }
+
+[class^="cs-type-"]{
+    background-image: url(../img/ie8/cs-types.png);
+}
+
+.cs-hamb{
+    background-image: url(../img/ie8/cs-hamb.png);
+}

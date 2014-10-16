@@ -94,8 +94,22 @@ $(document).ready( function() {
 	        {picker: $.datepick.defaultRenderer.picker. 
 	            replace(/\{link:clear\}/, ''). 
 	            replace(/\{link:close\}/, '')})
-		})
+		});
 }
+})
+
+$(document).on('click', '.modal-open', function(e){
+    e.preventDefault();
+    $('#modal').modal({
+        'show':true,
+        'backdrop':'static'
+    });
+});
+
+$(document).on('click', '.modal-close', function(e){
+    e.preventDefault();
+    console.log(123);
+    $('#modal').modal('hide');
 })
 
 window.onresize = function () {
@@ -178,3 +192,9 @@ $(document).on('click', '.amount-control', function(e){
     }
     amountValueElem.text( amount >=0 ? amount : 0 );
 });
+
+$(document).on('click', '.cs-hamb', function(e){
+    e.preventDefault();
+    $(this).toggleClass('active');
+    $(this).siblings('.popover').toggle();
+})
