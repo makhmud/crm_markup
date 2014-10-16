@@ -1,3 +1,53 @@
+var workHoursTable = function(options) {
+    var $self = this;
+    this._table = [];
+    this.options = options;
+
+    this.setTable = function(arr){
+        $self._table = arr;
+    };
+
+    this.getTable = function() {
+        return $self._table;
+    };
+
+    this.parseTable = function() {
+        $($self.options.tableSelector).find('tr').each( function(indx, elm) {
+            if (indx != 7) {
+                $self._table.push([]);
+                $(elm).find('td').each( function(indx2, elm2) {
+                    if(indx2 != 0) {
+                        $self._table[indx].push($(elm2).find('.inc-day-time').hasClass('inactive'))
+                    }
+                } )
+            }
+        });
+
+        return $self;
+    };
+
+    this.toggleRow = function(id) {
+        console.log($('#'+id).prop('checked'));
+        if ($('#'+id).prop('checked')) {
+            $('label[for="' + id + '"]').closest('tr').find('.inc-day-time').addClass('inactive');
+        } else {
+            $('label[for="' + id + '"]').closest('tr').find('.inc-day-time').removeClass('inactive');
+        }
+
+        $self.parseTable();
+    }
+
+    this.toggleCol = function(id) {
+        if ($('#'+id).prop('checked')) {
+            $($self.options.tableSelector).find('tr td:nth-child(' + ( parseInt(id.split('temp')[1])+1 ) + ') .inc-day-time').addClass('inactive');
+        } else {
+            $($self.options.tableSelector).find('tr td:nth-child(' + ( parseInt(id.split('temp')[1])+1 ) + ') .inc-day-time').removeClass('inactive');
+        }
+
+        $self.parseTable();
+    }
+}
+
 var widthAdapt = function() {
 	$('#top-panel').width( $('#page').width() - $('#left-sidebar').width() );
 	var finalContentOffset = $('#top-panel').width() - $('#order-list-wrapper').width();
@@ -6,6 +56,9 @@ var widthAdapt = function() {
 		finalContentOffset = maxWidth;
 	}
 	$('#final-content, #final-content .jspContainer').width(finalContentOffset);
+
+    $('.cladr').css({'margin-right' : ($(document).width() - $('#final-content').width() - $('#order-list-wrapper').width() - $('#left-sidebar').width()) + 'px'})
+    console.log();
 }
 
 var heightAdapt = function() {
@@ -37,10 +90,13 @@ window.onload = function() {
 	});
 }
 
+var wt = new workHoursTable({tableSelector:'#cs-address'});
+
 $(document).ready( function() {
 
 	// widthAdapt();
 	// heightAdapt();
+    wt.parseTable();
 
 	if (typeof( $().styler ) != 'undefined'){
 		$('select, input').styler();
@@ -96,6 +152,18 @@ $(document).ready( function() {
 	            replace(/\{link:close\}/, '')})
 		});
 }
+});
+
+$(document).on('change', '#cs-address tr td:first-child input', function(e){
+    wt.toggleRow($(this).attr('id'));
+})
+
+$(document).on('click', '#cs-address .inc-day-time:not(inactive)', function(e){
+    $(this).toggleClass('selected');
+})
+
+$(document).on('change', '#cs-address tr:last-child td input', function(e){
+    wt.toggleCol($(this).attr('id'));
 })
 
 $(document).on('click', '.modal-open', function(e){
@@ -162,7 +230,7 @@ $(document).on('click', '.popover-menu-trigger', function(e){
     $(this).siblings('.popover-menu').toggle();
 });
 
-$(document).on('change', 'input[type="checkbox"]', function(e){
+$(document).on('change', '#grade-table input[type="checkbox"]', function(e){
 	$(this).closest('td').toggleClass('checked-wrap');
 });
 
@@ -197,4 +265,4 @@ $(document).on('click', '.cs-hamb', function(e){
     e.preventDefault();
     $(this).toggleClass('active');
     $(this).siblings('.popover').toggle();
-})
+});

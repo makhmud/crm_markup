@@ -980,6 +980,18 @@ body.grade .summary{
 	top: 40px;
 }
 
+#order-list.cities li a{
+    border: none;
+}
+#order-list.cities li a .region{
+    font-size: 11px;
+}
+#order-list.cities .number{
+    margin-bottom: 5px;
+}
+#right-top-menu.cladr{
+    line-height: 50px;
+}
 .city-section{
     margin-left: 22px;
     margin-bottom: 20px;
@@ -1089,11 +1101,14 @@ body.grade .summary{
     position: absolute;
     top: 0;
 }
+#cs-address tr td:first-child .jq-checkbox{
+    float: right;
+}
 #cs-address tr:last-child label{
     position: absolute;
-    top: 10px;
-    left: -55px;
-    width: 120px;
+    top: 40px;
+    left: -25px;
+    width: 60px;
     /* Safari */
     -webkit-transform: rotate(-90deg);
 
@@ -1113,4 +1128,38 @@ body.grade .summary{
 
 .modal.fade{
     top: -100%;
+}
+.modal{
+    width: 590px;
+    height: 650px;
+}
+.modal-body{
+    max-height: 590px;
+}
+
+.form-table label{
+    float: left;
+}
+.form-table tr td:nth-child(1){
+    width: 50px;
+}
+
+.inc-day-time{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url("../img/plus.png") center center no-repeat #00ba55;
+}
+
+.inc-day-time:hover, .inc-day-time.selected{
+    background-color: #0c8c47;
+}
+
+.inc-day-time.inactive{
+    background-image: url(../img/minus.png);
+    background-color: #d0d0d0;
+}
+
+.modal input[type="submit"]:nth-child(1){
+    margin-left: 147px;
 }
