@@ -29,9 +29,9 @@ var workHoursTable = function(options) {
     this.toggleRow = function(id) {
         console.log($('#'+id).prop('checked'));
         if ($('#'+id).prop('checked')) {
-            $('label[for="' + id + '"]').closest('tr').find('.inc-day-time').addClass('inactive');
-        } else {
             $('label[for="' + id + '"]').closest('tr').find('.inc-day-time').removeClass('inactive');
+        } else {
+            $('label[for="' + id + '"]').closest('tr').find('.inc-day-time').addClass('inactive');
         }
 
         $self.parseTable();
@@ -39,9 +39,9 @@ var workHoursTable = function(options) {
 
     this.toggleCol = function(id) {
         if ($('#'+id).prop('checked')) {
-            $($self.options.tableSelector).find('tr td:nth-child(' + ( parseInt(id.split('temp')[1])+1 ) + ') .inc-day-time').addClass('inactive');
-        } else {
             $($self.options.tableSelector).find('tr td:nth-child(' + ( parseInt(id.split('temp')[1])+1 ) + ') .inc-day-time').removeClass('inactive');
+        } else {
+            $($self.options.tableSelector).find('tr td:nth-child(' + ( parseInt(id.split('temp')[1])+1 ) + ') .inc-day-time').addClass('inactive');
         }
 
         $self.parseTable();
@@ -101,7 +101,7 @@ $(document).ready( function() {
 	if (typeof( $().styler ) != 'undefined'){
 		$('select, input').styler();
 	}
-	$('input[type="checkbox"]:checked').closest('td').addClass('checked-wrap');
+	$('#grade-table input[type="checkbox"]:checked').closest('td').addClass('checked-wrap');
 
 	$(document).on('keyup', '#street', function() {
 

@@ -1086,10 +1086,10 @@ body.grade .summary{
     width: auto;
     display: inline;
     cursor: pointer;
+    font-size: 11px;
+    font-weight: normal;
 }
 #cs-address tr:last-child label{
-    font-weight: normal;
-    font-size: 11px;
     width: auto;
 }
 #cs-address tr:last-child td{
@@ -1103,6 +1103,7 @@ body.grade .summary{
 }
 #cs-address tr td:first-child .jq-checkbox{
     float: right;
+    margin-top: 4px;
 }
 #cs-address tr:last-child label{
     position: absolute;
@@ -1125,6 +1126,9 @@ body.grade .summary{
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
 }
+#cs-address tr:last-child label .up{
+
+}
 
 .modal.fade{
     top: -100%;
@@ -1132,6 +1136,7 @@ body.grade .summary{
 .modal{
     width: 590px;
     height: 650px;
+    font-size: 13px;
 }
 .modal-body{
     max-height: 590px;
@@ -1161,5 +1166,12 @@ body.grade .summary{
 }
 
 .modal input[type="submit"]:nth-child(1){
-    margin-left: 147px;
+    margin-left: 99px;
+}
+.modal-header{
+    padding-bottom: 0;
+    border: none;
+}
+.modal form.standart label{
+    width: 95px;
 }

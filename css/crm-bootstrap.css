@@ -669,3 +669,11 @@ td.checked-wrap{
 .cs-hamb.active{
     background-position: -20px 0;
 }
+
+.closepick{
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background-image: url(../img/closepick.png);
+    background-size: 12px 12px;
+}

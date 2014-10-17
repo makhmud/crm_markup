@@ -320,31 +320,50 @@
 
 <div class="modal hide fade" id="modal" data-backdrop="static" >
     <div class="modal-header">
-        <a href="#" type="button" class="close fr" data-dismiss="modal" aria-hidden="true">&times;</a>
+        <a href="#" type="button" class="close fr" data-dismiss="modal" aria-hidden="true"><span class="closepick"></span></a>
         <h3>Новый адрес</h3>
     </div>
     <div class="modal-body">
         <form action="/" class="standart">
             <div class="form-item">
-                <label for="delivery-type">Компания:</label>
+                <label for="company">Компания:</label>
                 <select name="" id="company">
+                    <option value="1">PickPoint</option>
+                    <option value="2">PickPoint</option>
+                </select>
+            </div>
+            <div class="form-item">
+                <label for="cs-type">Тип:</label>
+                <select name="" id="cs-type">
                     <option value="1">Курьером</option>
                     <option value="2">Почтой</option>
                 </select>
             </div>
             <div class="form-item">
-                <label for="delivery-type">Тип:</label>
-                <select name="" id="delivery-type">
-                    <option value="1">Курьером</option>
-                    <option value="2">Почтой</option>
-                </select>
-            </div>
 
+                <label for="">Адрес:</label>
+                <div class="field-group">
+                    <div class="line">
+                        <select name="" id="" class="small">
+                            <option value="">ул.</option>
+                        </select>
+                        <input type="text" class="large">
+                    </div>
+                    <div class="line">
+                        <input class="small" type="text" placeholder="Дом">
+                        <input class="small" type="text" placeholder="Кор">
+                        <input class="small" type="text" placeholder="Стр">
+                        <input class="small" type="text" placeholder="Под">
+                        <input class="small" type="text" placeholder="Эт">
+                        <input class="small" type="text" placeholder="Кв">
+                    </div>
+                </div>
+            </div>
             <div class="form-item form-table"><label for="#">Режим
                 работы</label>
             <table cellpadding="0" cellspacing="0" id="cs-address">
             <tr>
-                <td><label for="monday">Пн</label><input type="checkbox" id="monday"/></td>
+                <td><label for="monday">Пн</label><input type="checkbox" id="monday" checked/></td>
                 <td><a class="inc-day-time inactive" href=""></a></td>
                 <td><a class="inc-day-time" href=""></a></td>
                 <td><a class="inc-day-time" href=""></a></td>
@@ -371,7 +390,7 @@
                 <td><a class="inc-day-time" href=""></a></td>
             </tr>
             <tr>
-                <td><label for="tue">Вт</label><input type="checkbox" id="tue"/></td>
+                <td><label for="tue">Вт</label><input type="checkbox" id="tue" checked/></td>
                 <td><a class="inc-day-time" href=""></a></td>
                 <td><a class="inc-day-time" href=""></a></td>
                 <td><a class="inc-day-time" href=""></a></td>
@@ -398,7 +417,7 @@
                 <td><a class="inc-day-time" href=""></a></td>
             </tr>
             <tr>
-                <td><label for="wed">Ср</label><input type="checkbox" id="wed"/></td>
+                <td><label for="wed">Ср</label><input type="checkbox" id="wed" checked/></td>
                 <td><a class="inc-day-time" href=""></a></td>
                 <td><a class="inc-day-time" href=""></a></td>
                 <td><a class="inc-day-time" href=""></a></td>
@@ -425,7 +444,7 @@
                 <td><a class="inc-day-time" href=""></a></td>
             </tr>
             <tr>
-                <td><label for="thu">Чт</label><input type="checkbox" id="thu"/></td>
+                <td><label for="thu">Чт</label><input type="checkbox" id="thu" checked/></td>
                 <td><a class="inc-day-time" href=""></a></td>
                 <td><a class="inc-day-time" href=""></a></td>
                 <td><a class="inc-day-time" href=""></a></td>
@@ -452,7 +471,7 @@
                 <td><a class="inc-day-time" href=""></a></td>
             </tr>
             <tr>
-                <td><label for="fri">Пт</label><input type="checkbox" id="fri"/></td>
+                <td><label for="fri">Пт</label><input type="checkbox" id="fri" checked/></td>
                 <td><a class="inc-day-time" href=""></a></td>
                 <td><a class="inc-day-time" href=""></a></td>
                 <td><a class="inc-day-time" href=""></a></td>
@@ -479,7 +498,7 @@
                 <td><a class="inc-day-time" href=""></a></td>
             </tr>
             <tr>
-                <td><label for="sat">Сб</label><input type="checkbox" id="sat"/></td>
+                <td><label for="sat">Сб</label><input type="checkbox" id="sat" checked/></td>
                 <td><a class="inc-day-time" href=""></a></td>
                 <td><a class="inc-day-time" href=""></a></td>
                 <td><a class="inc-day-time" href=""></a></td>
@@ -506,7 +525,7 @@
                 <td><a class="inc-day-time" href=""></a></td>
             </tr>
             <tr>
-                <td><label for="sun">Вс</label><input type="checkbox" id="sun"/></td>
+                <td><label for="sun">Вс</label><input type="checkbox" id="sun" checked/></td>
                 <td><a class="inc-day-time" href=""></a></td>
                 <td><a class="inc-day-time" href=""></a></td>
                 <td><a class="inc-day-time" href=""></a></td>
@@ -534,53 +553,32 @@
             </tr>
             <tr>
                 <td></td>
-                <td><label for="temp1">00<span class="up">00</span> - 01<span class="up">00</span></label><input type="checkbox" id="temp1"></td>
-                <td><label for="temp2">01<span class="up">00</span> - 02<span class="up">00</span></label><input type="checkbox" id="temp2"></td>
-                <td><label for="temp3">02<span class="up">00</span> - 03<span class="up">00</span></label><input type="checkbox" id="temp3"></td>
-                <td><label for="temp4">03<span class="up">00</span> - 04<span class="up">00</span></label><input type="checkbox" id="temp4"></td>
-                <td><label for="temp5">04<span class="up">00</span> - 05<span class="up">00</span></label><input type="checkbox" id="temp5"></td>
-                <td><label for="temp6">05<span class="up">00</span> - 06<span class="up">00</span></label><input type="checkbox" id="temp6"></td>
-                <td><label for="temp7">06<span class="up">00</span> - 07<span class="up">00</span></label><input type="checkbox" id="temp7"></td>
-                <td><label for="temp8">07<span class="up">00</span> - 08<span class="up">00</span></label><input type="checkbox" id="temp8"></td>
-                <td><label for="temp9">08<span class="up">00</span> - 09<span class="up">00</span></label><input type="checkbox" id="temp9"></td>
-                <td><label for="temp10">09<span class="up">00</span> - 10<span class="up">00</span></label><input type="checkbox" id="temp10"></td>
-                <td><label for="temp11">10<span class="up">00</span> - 11<span class="up">00</span></label><input type="checkbox" id="temp11"></td>
-                <td><label for="temp12">11<span class="up">00</span> - 12<span class="up">00</span></label><input type="checkbox" id="temp12"></td>
-                <td><label for="temp13">12<span class="up">00</span> - 13<span class="up">00</span></label><input type="checkbox" id="temp13"></td>
-                <td><label for="temp14">13<span class="up">00</span> - 14<span class="up">00</span></label><input type="checkbox" id="temp14"></td>
-                <td><label for="temp15">14<span class="up">00</span> - 15<span class="up">00</span></label><input type="checkbox" id="temp15"></td>
-                <td><label for="temp16">15<span class="up">00</span> - 16<span class="up">00</span></label><input type="checkbox" id="temp16"></td>
-                <td><label for="temp17">16<span class="up">00</span> - 17<span class="up">00</span></label><input type="checkbox" id="temp17"></td>
-                <td><label for="temp18">17<span class="up">00</span> - 18<span class="up">00</span></label><input type="checkbox" id="temp18"></td>
-                <td><label for="temp19">18<span class="up">00</span> - 19<span class="up">00</span></label><input type="checkbox" id="temp19"></td>
-                <td><label for="temp20">19<span class="up">00</span> - 20<span class="up">00</span></label><input type="checkbox" id="temp20"></td>
-                <td><label for="temp21">20<span class="up">00</span> - 21<span class="up">00</span></label><input type="checkbox" id="temp21"></td>
-                <td><label for="temp22">21<span class="up">00</span> - 22<span class="up">00</span></label><input type="checkbox" id="temp22"></td>
-                <td><label for="temp23">22<span class="up">00</span> - 23<span class="up">00</span></label><input type="checkbox" id="temp23"></td>
-                <td><label for="temp24">23<span class="up">00</span> - 24<span class="up">00</span></label><input type="checkbox" id="temp24"></td>
+                <td><label for="temp1">00<sup>00</sup> - 01<sup>00</sup></label><input type="checkbox" id="temp1" checked></td>
+                <td><label for="temp2">01<sup>00</sup> - 02<sup>00</sup></label><input type="checkbox" id="temp2" checked></td>
+                <td><label for="temp3">02<sup>00</sup> - 03<sup>00</sup></label><input type="checkbox" id="temp3" checked></td>
+                <td><label for="temp4">03<sup>00</sup> - 04<sup>00</sup></label><input type="checkbox" id="temp4" checked></td>
+                <td><label for="temp5">04<sup>00</sup> - 05<sup>00</sup></label><input type="checkbox" id="temp5" checked></td>
+                <td><label for="temp6">05<sup>00</sup> - 06<sup>00</sup></label><input type="checkbox" id="temp6" checked></td>
+                <td><label for="temp7">06<sup>00</sup> - 07<sup>00</sup></label><input type="checkbox" id="temp7" checked></td>
+                <td><label for="temp8">07<sup>00</sup> - 08<sup>00</sup></label><input type="checkbox" id="temp8" checked></td>
+                <td><label for="temp9">08<sup>00</sup> - 09<sup>00</sup></label><input type="checkbox" id="temp9" checked></td>
+                <td><label for="temp10">09<sup>00</sup> - 10<sup>00</sup></label><input type="checkbox" id="temp10" checked></td>
+                <td><label for="temp11">10<sup>00</sup> - 11<sup>00</sup></label><input type="checkbox" id="temp11" checked></td>
+                <td><label for="temp12">11<sup>00</sup> - 12<sup>00</sup></label><input type="checkbox" id="temp12" checked></td>
+                <td><label for="temp13">12<sup>00</sup> - 13<sup>00</sup></label><input type="checkbox" id="temp13" checked></td>
+                <td><label for="temp14">13<sup>00</sup> - 14<sup>00</sup></label><input type="checkbox" id="temp14" checked></td>
+                <td><label for="temp15">14<sup>00</sup> - 15<sup>00</sup></label><input type="checkbox" id="temp15" checked></td>
+                <td><label for="temp16">15<sup>00</sup> - 16<sup>00</sup></label><input type="checkbox" id="temp16" checked></td>
+                <td><label for="temp17">16<sup>00</sup> - 17<sup>00</sup></label><input type="checkbox" id="temp17" checked></td>
+                <td><label for="temp18">17<sup>00</sup> - 18<sup>00</sup></label><input type="checkbox" id="temp18" checked></td>
+                <td><label for="temp19">18<sup>00</sup> - 19<sup>00</sup></label><input type="checkbox" id="temp19" checked></td>
+                <td><label for="temp20">19<sup>00</sup> - 20<sup>00</sup></label><input type="checkbox" id="temp20" checked></td>
+                <td><label for="temp21">20<sup>00</sup> - 21<sup>00</sup></label><input type="checkbox" id="temp21" checked></td>
+                <td><label for="temp22">21<sup>00</sup> - 22<sup>00</sup></label><input type="checkbox" id="temp22" checked></td>
+                <td><label for="temp23">22<sup>00</sup> - 23<sup>00</sup></label><input type="checkbox" id="temp23" checked></td>
+                <td><label for="temp24">23<sup>00</sup> - 24<sup>00</sup></label><input type="checkbox" id="temp24" checked></td>
             </tr>
             </table>
-            </div>
-
-            <div class="form-item">
-
-                <label for="">Адрес доставки:</label>
-                <div class="field-group">
-                    <div class="line">
-                        <select name="" id="" class="small">
-                            <option value="">ул.</option>
-                        </select>
-                        <input type="text" class="large">
-                    </div>
-                    <div class="line">
-                        <input class="small" type="text" placeholder="Дом">
-                        <input class="small" type="text" placeholder="Кор">
-                        <input class="small" type="text" placeholder="Стр">
-                        <input class="small" type="text" placeholder="Под">
-                        <input class="small" type="text" placeholder="Эт">
-                        <input class="small" type="text" placeholder="Кв">
-                    </div>
-                </div>
             </div>
 
             <div class="form-item textarea">
