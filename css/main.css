@@ -14,6 +14,7 @@ body{
 	height: 100%;
 	min-width: 1024px;
 	font-size: 1.2em;
+    overflow-y: hidden;
 }
 header{
 	width: 100%;
@@ -1073,6 +1074,15 @@ body.grade .summary{
 #cs-table tr th:nth-child(5){
     width: 5%;
 }
+#cs-table .popover ul{
+    padding: 8px;
+}
+#cs-table .popover ul li{
+     padding-bottom: 6px;
+ }
+#cs-table .popover ul li:last-child{
+    padding-bottom: 0;
+}
 #cs-table tr th:nth-child(6){
     width: 23%;
 }
@@ -1142,7 +1152,7 @@ body.grade .summary{
 }
 
 .modal.fade{
-    top: -100%;
+    top: -300%;
 }
 .modal{
     width: 590px;
