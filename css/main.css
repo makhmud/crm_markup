@@ -1019,6 +1019,9 @@ body.grade .summary{
     width: 208px;
     vertical-align: top;
 }
+.city-section .cs-item .col:last-child{
+    width: 308px;
+}
 .city-section .cs-item .line{
     margin-bottom: 10px;
 }
