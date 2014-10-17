@@ -46,6 +46,29 @@ var workHoursTable = function(options) {
 
         $self.parseTable();
     }
+
+    this.redrawTableControls = function() {
+        for(var i=1;i<=7;i++){
+
+            var currentControl = $($self.options.tableSelector).find('tr:nth-child(' + i + ') td:nth-child(1) input');
+            if($($self.options.tableSelector).find('tr:nth-child(' + i + ') td .inc-day-time.inactive').length != 0){
+                currentControl.prop('checked', false);
+            } else {
+                currentControl.prop('checked', true);
+            }
+            currentControl.trigger('refresh');
+        }
+
+        for(var i=1; i<=25; i++){
+            var currentControl = $($self.options.tableSelector).find('tr:last-child td:nth-child(' + i + ') input');
+            if($($self.options.tableSelector).find('tr td:nth-child(' + i + ') .inc-day-time.inactive').length != 0){
+                currentControl.prop('checked', false);
+            } else {
+                currentControl.prop('checked', true);
+            }
+            currentControl.trigger('refresh');
+        }
+    }
 }
 
 var widthAdapt = function() {
@@ -97,6 +120,7 @@ $(document).ready( function() {
 	// widthAdapt();
 	// heightAdapt();
     wt.parseTable();
+    wt.redrawTableControls();
 
 	if (typeof( $().styler ) != 'undefined'){
 		$('select, input').styler();
@@ -159,7 +183,8 @@ $(document).on('change', '#cs-address tr td:first-child input', function(e){
 })
 
 $(document).on('click', '#cs-address .inc-day-time:not(inactive)', function(e){
-    $(this).toggleClass('selected');
+    $(this).toggleClass('inactive');
+    wt.redrawTableControls();
 })
 
 $(document).on('change', '#cs-address tr:last-child td input', function(e){
