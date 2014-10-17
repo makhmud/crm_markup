@@ -292,6 +292,13 @@ body.delivery #search-order-form input, body.grade #search-order-form input{
 	text-align: center;
 	padding: 25px 0;
 }
+#order-list #aside-controls a{
+    padding: 0;
+    margin: auto;
+}
+#order-list #aside-controls a:hover{
+    background-color: rgba(0,0,0,0);
+}
 
 #inner-content{
 	width: 100%;
@@ -1020,7 +1027,7 @@ body.grade .summary{
     vertical-align: top;
 }
 .city-section .cs-item .col:last-child{
-    width: 308px;
+    width: 228px;
 }
 .city-section .cs-item .line{
     margin-bottom: 10px;

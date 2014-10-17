@@ -70,7 +70,7 @@ var heightAdapt = function() {
 	$('#left-sidebar').height( pageHeight );
 	$('#inner-content').height( pageHeight - topPanelHeight );
 	$('#final-content').css({height: (pageHeight - topPanelHeight) + 'px' });
-	$('#order-list-wrapper ul').height( pageHeight - topPanelHeight - $('#aside-controls').outerHeight());
+	$('#order-list-wrapper ul').height( pageHeight - topPanelHeight );
 }
 
 var totalAdapt = function() {
