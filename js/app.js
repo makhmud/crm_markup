@@ -50,8 +50,8 @@ var workHoursTable = function(options) {
 
 var widthAdapt = function() {
 	$('#top-panel').width( $('#page').width() - $('#left-sidebar').width() );
-	var finalContentOffset = $('#top-panel').width() - $('#order-list-wrapper').width();
-	var maxWidth = 1204 - $('#order-list-wrapper').width();
+	var finalContentOffset = $('#top-panel').width() - $('#order-list-wrapper').width() - 6;
+	var maxWidth = 1204 - $('#order-list-wrapper').width() - 6;
 	if ( finalContentOffset>=maxWidth) {
 		finalContentOffset = maxWidth;
 	}

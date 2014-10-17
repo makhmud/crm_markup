@@ -241,7 +241,8 @@ body.delivery #search-order-form input, body.grade #search-order-form input{
 
 
 #order-list-wrapper{
-	width: 240px;
+	width: 234px;
+    border-right: 6px solid #f2f2f2;
 }
 #order-list{
 	height: 540px;
