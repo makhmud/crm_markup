@@ -1048,7 +1048,7 @@ body.grade .summary{
 }
 
 #cs-table{
-    width: 100%;
+    width: 98%;
     margin-bottom: 20px;
 }
 #cs-table th{
@@ -1209,4 +1209,5 @@ body.grade .summary{
 
 #cs-table + div{
     padding-bottom: 50px;
+    width: 98%;
 }
