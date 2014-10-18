@@ -80,8 +80,7 @@ var widthAdapt = function() {
 	}
 	$('#final-content, #final-content .jspContainer').width(finalContentOffset);
 
-    $('.cladr').css({'margin-right' : ($(document).width() - $('#final-content').width() - $('#order-list-wrapper').width() - $('#left-sidebar').width()) + 'px'})
-    console.log();
+    $('.cladr').css({'margin-right' : ($(document).width() - $('#final-content').width() - $('#order-list-wrapper').width() - $('#left-sidebar').width()) + 'px'});
 }
 
 var heightAdapt = function() {
