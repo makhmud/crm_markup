@@ -992,6 +992,9 @@ body.grade .summary{
 #order-list.cities li a{
     border: none;
 }
+#order-list.cities li .info{
+    padding-left: 7px;
+}
 #order-list.cities li a .region{
     font-size: 11px;
 }
@@ -1195,4 +1198,15 @@ body.grade .summary{
 }
 .modal form.standart label{
     width: 95px;
+}
+.modal.fade.in{
+    top: 2%;
+}
+#final-content .jspVerticalBar{
+    position: fixed;
+    top: 90px;
+}
+
+#cs-table + div{
+    padding-bottom: 50px;
 }
