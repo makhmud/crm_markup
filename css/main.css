@@ -12,7 +12,7 @@ body{
 #page{
 	width: 100%;
 	height: 100%;
-	min-width: 1002px;
+	min-width: 999px;
 	font-size: 1.2em;
     overflow-y: hidden;
 }
@@ -370,7 +370,7 @@ body.delivery #search-order-form input, body.grade #search-order-form input{
 	padding: 11px 20px 11px;
 }
 .item-info .info{
-	width: 330px;
+	width: 295px;
 }
 
 .item-info > *{
@@ -925,7 +925,7 @@ form[id^="order-form"] input[type="submit"]{
 }
 
 body.grade .summary{
-	padding: 8px 0px 0 10px;
+	padding: 8px 0px 10px 10px;
 }
 
 #street-wrap{
@@ -1028,7 +1028,7 @@ body.grade .summary{
 }
 .city-section .cs-item .col{
     display: inline-block;
-    width: 208px;
+    width: 200px;
     vertical-align: top;
 }
 .city-section .cs-item .col:last-child{
